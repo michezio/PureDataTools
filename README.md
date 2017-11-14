@@ -1,6 +1,6 @@
 # PureData
 
-A collection of tools, GUIs, FX and other stuff designed for PD Vanilla without external libraries.
+_WORK IN PROGRESS_ A collection of tools, GUIs, FX and other stuff designed for PD Vanilla without external libraries.
 
 ## Prerequisites
 
