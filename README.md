@@ -10,12 +10,12 @@ These patches/abstractions have been developed and tested on Windows 7/10 and Ub
 
 ## Installing
 
-Most of abstractions have no dependancy, so you can use each of them alone except in few rare cases and it will be notified. Many patches depends on more than one abstraction and in that case it will be reported which ones. Most of the abstraction come with a help patch but not all of them.
+Most of abstractions don't have dependancies, so you can use each of them by themselves except in few rare cases and it will be notified. Many patches depend on more than one abstraction and in that case it will be reported which one. Most of the abstractions come with a help patch but not all of them.
 
 To use them simply copy-paste the abstraction (and its dependancies) into you Pd working or search folder, then recall it with its name. You can eventually:
 * Put the abstractions into the same folder as the patch that uses them.
 * Put the abstractions into the extra folder of you Pd Vanilla installation.
-* Create a new folder with the abstractions, then create a search path for that in Pd file/preferences/path...
+* Create a new folder with the abstractions, then create a search path for that in Pd menu file->preferences->path...
 
 ## Content
 
