@@ -25,6 +25,7 @@ To use them simply copy-paste the abstraction (and its dependancies) into you Pd
 * CONTROLS - midi and osc control blocks, triggers, sequencers and others.
 * VST - a series of GUI based elements that work just like VSTs.
 * PATCH - collection of patches that use many different abstractions.
+* Extra - Everything else, not yet classified nor refined and without helpers.
 
 ### License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
