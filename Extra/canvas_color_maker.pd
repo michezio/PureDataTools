@@ -1,0 +1,65 @@
+#N canvas 266 331 600 397 12;
+#X obj 34 33 inlet;
+#X obj 82 33 inlet;
+#X obj 132 32 inlet;
+#X text 33 12 red;
+#X text 81 11 green;
+#X text 136 11 blue;
+#X obj 379 81 t b f;
+#X obj 313 139 +;
+#X obj 313 164 t b f;
+#X obj 313 195 +;
+#X obj 236 58 * -65536;
+#X obj 313 59 * -256;
+#X obj 379 59 * -1;
+#X obj 313 226 - 1;
+#X obj 313 348 outlet;
+#X obj 101 101 cnv 15 78 47 \$0-foo \$0-bar empty 20 12 0 14 -66577
+-66577 0;
+#X obj 103 105 vsl 8 38 0 255 0 0 \$0-foo \$0-bar empty 1 -9 0 10 -258049
+-262144 -262144 0 1;
+#X obj 113 105 vsl 8 38 0 255 0 0 \$0-foo \$0-bar empty 1 -9 0 10 -4033
+-262144 -262144 0 1;
+#X obj 123 105 vsl 8 38 0 255 0 0 \$0-foo \$0-bar empty 1 -9 0 10 -64
+-262144 -262144 0 1;
+#X obj 134 103 cnv 15 43 43 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 136 105 cnv 15 39 39 empty \$0-show empty 20 12 0 14 -128279
+-66577 0;
+#X obj 433 223 f \$0;
+#X obj 404 253 pack;
+#X obj 433 197 loadbang;
+#X msg 404 287 \; \$2-show color \$1;
+#X obj 236 32 i;
+#X obj 313 32 i;
+#X obj 379 32 i;
+#X obj 189 7 loadbang;
+#X msg 189 38 127;
+#X connect 0 0 16 0;
+#X connect 1 0 17 0;
+#X connect 2 0 18 0;
+#X connect 6 0 7 0;
+#X connect 6 1 7 1;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 9 1;
+#X connect 9 0 13 0;
+#X connect 10 0 9 0;
+#X connect 11 0 7 0;
+#X connect 12 0 6 0;
+#X connect 13 0 14 0;
+#X connect 13 0 22 0;
+#X connect 16 0 25 0;
+#X connect 17 0 26 0;
+#X connect 18 0 27 0;
+#X connect 21 0 22 1;
+#X connect 22 0 24 0;
+#X connect 23 0 21 0;
+#X connect 25 0 10 0;
+#X connect 26 0 11 0;
+#X connect 27 0 12 0;
+#X connect 28 0 29 0;
+#X connect 29 0 16 0;
+#X connect 29 0 17 0;
+#X connect 29 0 18 0;
+#X coords 0 -1 1 1 80 49 2 100 100;
