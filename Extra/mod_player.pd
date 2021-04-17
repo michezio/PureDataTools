@@ -1,0 +1,64 @@
+#N canvas 716 250 521 474 10;
+#X obj 101 102 cnv 15 48 146 empty empty FILE 3 6 0 5 -233017 -66577
+0;
+#X obj 112 115 bng 25 250 50 0 \$0-open \$0-bar open 3 12 0 7 -99865
+-262144 -262144;
+#X obj 112 144 bng 25 250 50 0 \$0-start \$0-bar empty 1 12 0 7 -99865
+-262144 -262144;
+#X obj 110 205 mknob 30 100 0.02 2 1 0 \$0-vol \$0-bar empty -2 -6
+0 8 -162280 -66577 -1 7400 1;
+#X obj 112 173 tgl 25 0 \$0-loop \$0-bar empty 17 7 0 10 -99865 -262144
+-1 1 1;
+#X obj 101 238 cnv 10 10 10 empty empty L__OUTPUT__R 1 6 0 5 -233017
+-66577 0;
+#X msg 167 172 start;
+#X msg 216 176 stop;
+#X obj 199 109 t b b;
+#X obj 199 312 *~;
+#X obj 263 250 r \$0-vol;
+#X msg 263 271 \$1 50;
+#X obj 263 290 line~;
+#X obj 199 342 outlet~;
+#X obj 262 109 inlet;
+#X obj 304 192 spigot;
+#X obj 343 167 r \$0-loop;
+#X obj 176 43 openpanel;
+#X obj 176 18 r \$0-open;
+#X obj 340 83 r \$0-start;
+#X obj 200 200 readsf~ 2;
+#X obj 276 320 *~;
+#X obj 276 350 outlet~;
+#X obj 158 113 bang;
+#X msg 176 68 set open \$1 \, 1;
+#X obj 161 143 del 1000;
+#X msg 200 138 open H:/Users/Shin/Music/PDRec/Guitar/ArpeggioBello1.wav
+;
+#X obj 82 34 loadbang;
+#X msg 83 61 1;
+#X connect 6 0 20 0;
+#X connect 7 0 20 0;
+#X connect 8 0 6 0;
+#X connect 8 1 26 0;
+#X connect 9 0 13 0;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 9 1;
+#X connect 12 0 21 1;
+#X connect 14 0 26 0;
+#X connect 15 0 8 0;
+#X connect 16 0 15 1;
+#X connect 17 0 24 0;
+#X connect 18 0 17 0;
+#X connect 19 0 7 0;
+#X connect 20 0 9 0;
+#X connect 20 1 21 0;
+#X connect 20 2 15 0;
+#X connect 21 0 22 0;
+#X connect 23 0 25 0;
+#X connect 24 0 26 0;
+#X connect 24 0 23 0;
+#X connect 25 0 6 0;
+#X connect 26 0 20 0;
+#X connect 27 0 28 0;
+#X connect 28 0 3 0;
+#X coords 0 -1 1 1 50 150 2 100 100;

@@ -1,0 +1,148 @@
+#N canvas 143 91 944 729 10;
+#X obj 101 302 cnv 15 248 146 empty empty EXT-CLK______________________RESET
+4 6 0 10 -233017 -66577 0;
+#X obj 107 337 tgl_seeker;
+#X obj 539 233 metro;
+#X obj 571 194 swap 60000;
+#X obj 571 215 /;
+#X obj 299 320 nbx 4 14 30 500 0 0 \$0-bpm \$0-bar empty 0 20 0 10
+-99865 -262144 -1 61 256;
+#X obj 102 438 cnv 10 10 10 empty empty 1___2___3___4____5___6___7___8__CLK
+0 5 0 10 -233017 -66577 0;
+#X obj 308 337 tgl 12 0 \$0-out1 \$0-bar empty 17 7 0 10 -99865 -262144
+-1 1 1;
+#X obj 308 349 tgl 12 0 \$0-out2 \$0-bar empty 17 7 0 10 -99865 -262144
+-1 1 1;
+#X obj 308 361 tgl 12 0 \$0-out3 \$0-bar empty 17 7 0 10 -99865 -262144
+-1 1 1;
+#X obj 308 373 tgl 12 0 \$0-out4 \$0-bar empty 17 7 0 10 -99865 -262144
+-1 1 1;
+#X obj 308 385 tgl 12 0 \$0-out5 \$0-bar empty 17 7 0 10 -99865 -262144
+-1 1 1;
+#X obj 308 397 tgl 12 0 \$0-out6 \$0-bar empty 17 7 0 10 -99865 -262144
+-1 1 1;
+#X obj 308 409 tgl 12 0 \$0-out7 \$0-bar empty 17 7 0 10 -99865 -262144
+-1 1 1;
+#X obj 308 421 tgl 12 0 \$0-out8 \$0-bar empty 17 7 0 10 -99865 -262144
+-1 1 1;
+#X obj 107 320 hradio 12 1 0 16 \$0-extension \$0-bar empty 0 -8 0
+10 -162280 -99865 -1 15;
+#X obj 536 416 mod;
+#X obj 554 398 + 1;
+#X obj 554 381 r \$0-extension;
+#X obj 536 354 i;
+#X obj 566 354 + 1;
+#X obj 324 337 tgl 20 0 \$0-onoff \$0-bar empty 17 7 0 10 -99865 -262144
+-1 1 1;
+#X obj 571 167 r \$0-bpm;
+#X obj 327 362 tgl 14 0 \$0-ext \$0-bar empty 17 7 0 10 -99865 -262144
+-1 0 1;
+#X obj 449 122 r \$0-onoff;
+#X obj 478 312 spigot;
+#X obj 536 311 spigot;
+#X obj 550 292 == 0;
+#X obj 536 330 spigot;
+#X obj 395 119 inlet;
+#X obj 511 264 r \$0-ext;
+#X obj 672 124 inlet;
+#X msg 672 259 0;
+#X obj 551 563 outlet;
+#X obj 536 445 s \$0-bangs;
+#X obj 144 22 r \$0-bangs;
+#X obj 32 139 spigot;
+#X obj 39 121 r \$0-out1;
+#X obj 103 141 spigot;
+#X obj 110 122 r \$0-out2;
+#X obj 69 183 spigot;
+#X obj 140 185 spigot;
+#X obj 76 165 r \$0-out3;
+#X obj 147 166 r \$0-out4;
+#X obj 100 223 spigot;
+#X obj 171 225 spigot;
+#X obj 107 205 r \$0-out5;
+#X obj 178 206 r \$0-out6;
+#X obj 124 261 spigot;
+#X obj 195 263 spigot;
+#X obj 131 243 r \$0-out7;
+#X obj 202 244 r \$0-out8;
+#X obj 98 563 outlet;
+#X obj 148 563 outlet;
+#X obj 198 563 outlet;
+#X obj 248 563 outlet;
+#X obj 298 563 outlet;
+#X obj 348 563 outlet;
+#X obj 398 563 outlet;
+#X obj 448 563 outlet;
+#X obj 295 258 t f;
+#X obj 107 421 tgl_seeker;
+#X obj 107 409 tgl_seeker;
+#X obj 107 397 tgl_seeker;
+#X obj 107 385 tgl_seeker;
+#X obj 107 373 tgl_seeker;
+#X obj 107 361 tgl_seeker;
+#X obj 107 349 tgl_seeker;
+#X connect 1 0 52 0;
+#X connect 2 0 26 0;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 2 1;
+#X connect 4 0 60 0;
+#X connect 16 0 34 0;
+#X connect 17 0 16 1;
+#X connect 18 0 17 0;
+#X connect 19 0 20 0;
+#X connect 19 0 16 0;
+#X connect 20 0 19 1;
+#X connect 22 0 3 0;
+#X connect 24 0 28 1;
+#X connect 24 0 2 0;
+#X connect 25 0 28 0;
+#X connect 26 0 28 0;
+#X connect 27 0 26 1;
+#X connect 28 0 19 0;
+#X connect 28 0 33 0;
+#X connect 29 0 25 0;
+#X connect 30 0 25 1;
+#X connect 30 0 27 0;
+#X connect 31 0 32 0;
+#X connect 32 0 19 0;
+#X connect 35 0 36 0;
+#X connect 35 0 38 0;
+#X connect 35 0 40 0;
+#X connect 35 0 41 0;
+#X connect 35 0 44 0;
+#X connect 35 0 45 0;
+#X connect 35 0 48 0;
+#X connect 35 0 49 0;
+#X connect 36 0 1 0;
+#X connect 37 0 36 1;
+#X connect 38 0 67 0;
+#X connect 39 0 38 1;
+#X connect 40 0 66 0;
+#X connect 41 0 65 0;
+#X connect 42 0 40 1;
+#X connect 43 0 41 1;
+#X connect 44 0 64 0;
+#X connect 45 0 63 0;
+#X connect 46 0 44 1;
+#X connect 47 0 45 1;
+#X connect 48 0 62 0;
+#X connect 49 0 61 0;
+#X connect 50 0 48 1;
+#X connect 51 0 49 1;
+#X connect 60 0 1 1;
+#X connect 60 0 67 1;
+#X connect 60 0 66 1;
+#X connect 60 0 65 1;
+#X connect 60 0 64 1;
+#X connect 60 0 63 1;
+#X connect 60 0 62 1;
+#X connect 60 0 61 1;
+#X connect 61 0 59 0;
+#X connect 62 0 58 0;
+#X connect 63 0 57 0;
+#X connect 64 0 56 0;
+#X connect 65 0 55 0;
+#X connect 66 0 54 0;
+#X connect 67 0 53 0;
+#X coords 0 -1 1 1 250 150 2 100 300;
