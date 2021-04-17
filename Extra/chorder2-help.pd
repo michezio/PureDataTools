@@ -1,0 +1,497 @@
+#N canvas 396 96 825 546 10;
+#X msg 65 176 velocity 100;
+#X msg 89 197 duration 1000;
+#X msg 114 219 transpose -2;
+#X text 65 135 ARGUMENTS (default): velocity (64) \, duration (500)
+\, transpose (0) \, color (1 - grey), f 96;
+#N canvas 502 182 444 465 preset_mode 0;
+#N canvas 455 145 889 489 chords_list 0;
+#X text 28 18 maj - major \; min - minor \; dim - diminished \; aug
+- augmented \; maj7 - major 7M \; min7 - minor 7m \; dom7 - major 7m
+(dominant 7) \; dim7 - diminished (flat 7m) \; maj3 - major (no5) \;
+min3 - minor (no5) \; pow - power chord (no3) \; tri - tritone (flat
+5 no3) \;, f 30;
+#X text 27 204 majfl5 - major (flat 5) \; minsh5 - minor (sharp 5)
+\; sus2 - suspended 2M (no3) \; sus4 - suspended 4 (no3) \; sus24 -
+suspended 2M and 4 (no3) \; minmaj7 - minor 7M \; sus7 - suspended
+4 7m \; min7fl5 - minor 7m (flat 5) (half-diminished) \; aug7 - augmented
+7m \; maj6 - major 6M \; min6 - minor 6M \;;
+#X text 27 379 maj7fl5 - major 7M (flat 5) \; maj7sh5 - major 7M (sharp
+5) \; min7sh5 - minor 7m (sharp 5) \; dom7fl5 - major 7M (flat 5) \;
+;
+#X text 29 453 add 2 in front (e.g. 2maj7) for 2 octave version;
+#X text 546 22 dom9 - dominant 9 \; min9 - minor 9 \; maj9 - major
+9 \; minmaj9 - minor 9 (major 7) \; majadd9 - major 9 (no7) \; minadd9
+- minor 9 (no7) \; maj9sh11 - major 9 (sharp 11) \; dom9fl5 - dominant
+9 (flat 5) \; dom9sh5 - dominant 9 (sharp 5) \;, f 44;
+#X text 545 164 dom11 - dominant 11 \; min11 - minor 11 \; maj11 -
+major 11 \; maj11fl9 - major 11 (flat 9) \; dom13 - dominant 13 \;
+min13 - minor 13 \; maj13 - major 13 \; dom13fl9 - dominant 13 (flat
+9) \; maj13sh11 - major 13 (sharp 11) \; dom13sh11 - dominant 13 (sharp
+11) \;;
+#X text 546 314 dom7fl9 - dominant 7 (flat 9) \; dom7sh9 - dominant
+7 (sharp 9) \; dom7fl59 - dominant 7 (flat 5 and 9) \; dom7fl5sh9 -
+dominant 7 (flat 5 sharp 9) \; dom7sh5fl9 - dominant 7 (sharp 5 flat
+9) \; dom7sh59 - dominant 7 (sharp 5 and 9) \;;
+#X text 546 416 maj10 - add 10M (no3 no5) \; min10 - add 10m (no3 no5)
+\; octava - that;
+#X restore 157 173 pd chords_list;
+#X text 93 227 play C major;
+#X text 116 321 play a G chord with the last shape used;
+#X msg 82 322 55;
+#X msg 28 227 maj 60;
+#X text 11 84 You can even play polychords by writing more than one
+chord separated by a comma. The chord shape showed will be that of
+the last chord written in the message. Pay attention to polyphony and
+note stealing as the same note from different chords will be repeated
+on different oscillators.;
+#X text 12 53 You can set a chord shape without playing it by using
+negative numbers as note., f 60;
+#X text 11 13 PRESET MODE: play a chord by sending a message with the
+name of the chord followed by the root note (see chord_list for a list
+of all the chord names available).;
+#X obj 43 423 outlet;
+#X obj 8 176 loadbang;
+#X msg 8 201 maj -1, f 16;
+#X msg 41 250 2min 57;
+#X text 111 247 play A minor on 2 octaves;
+#X msg 55 273 maj13 53;
+#X text 128 270 play F major 13;
+#X msg 65 297 dom13fl9 -1;
+#X text 154 290 set a dominant 13 (flat 9) chord but don't play it
+, f 29;
+#X msg 83 349 maj 60 \, 2min 71;
+#X text 201 344 play a C major and a B minor (2 octaves) polychord
+, f 28;
+#X connect 3 0 8 0;
+#X connect 4 0 8 0;
+#X connect 9 0 10 0;
+#X connect 10 0 8 0;
+#X connect 11 0 8 0;
+#X connect 13 0 8 0;
+#X connect 15 0 8 0;
+#X connect 17 0 8 0;
+#X restore 182 330 pd preset_mode;
+#N canvas 777 159 450 396 manual_mode 0;
+#X msg 79 258 67;
+#X msg 56 206 60 \, 67;
+#X msg 70 230 60;
+#X msg 39 178 60 \, 67 \, 74;
+#X text 113 229 play a C chord;
+#X text 125 258 play a G chord;
+#X text 116 204 play a C and G polychord (same shape);
+#X text 126 178 play a C \, G and D polychord (same shape);
+#X text 16 22 MANUAL MODE: simply design the chord (click on keys)
+and bang a message containing a note to play it.;
+#X text 15 55 You can even input more than one note separated by a
+comma to play "polychords" \, see PRESET MODE for more complex ones.
+Pay attention to polyphony and note stealing. If 2 chords contain any
+note in common they will be played as different notes on different
+oscillators.;
+#X obj 46 341 outlet, f 16;
+#X connect 0 0 10 0;
+#X connect 1 0 10 0;
+#X connect 2 0 10 0;
+#X connect 3 0 10 0;
+#X restore 182 304 pd manual_mode;
+#N canvas 468 50 747 676 advanced_mode 0;
+#X msg 14 194 build 60 T 3M 5p;
+#X text 158 193 build and play a C major chord;
+#X text 233 247 build and play a B flat strange chord;
+#X obj 29 628 outlet;
+#X text 309 303 combine the 3 methods to build a complex polychord
+, f 52;
+#X text 15 12 ADVANCED MODE: if you are a bit nerd like me you might
+like the possibility to build you own wierd chord on the fly! And actually
+\, that's quite easy. Simply send a message containing the keyword
+"build" followed by the root note of the chord and each grade you'd
+like to play. Use a negative note to just build but not play the chord
+\, and list messages to build polychords. If you are brave you can
+combine each of the 3 methods of use \, e.g. you can expand a preset
+chord by writing it and then building a new chord on the same root
+note writing only the grades you want to add \, omitting the tonic
+(T). Note that the chord showed reflect just the last instruction you
+wrote in the message. Refere to the following nomenclature for grades.
+, f 101;
+#X text 100 579 Well \, if you are even nerdier you can build chord
+the hard way by explicitly tell which note are on and which are off
+in a "boolean" way. It may appear awkward \, but actually this way
+you can generate chords using an algorithm to build messages of this
+kind. You know how to do that :D, f 85;
+#X text 26 131 T/1p 2m 2M 3m 3M 4p 5f 5p 5s/6m 6M/7f 7m 7M 8p 9m 9M
+10m 10M/11f 11p 11s 12p 13m 13M 14m 14M, f 95;
+#X msg 59 304 maj13 48 \, 60 \, build 71 T 3M 5p 7m;
+#X msg 63 366 maj13 60 \, 48 \, build 71 T 3M 5p 7m;
+#X text 77 326 observe how that last chord steals the oscillators from
+the first because we input 16 note on a 12 voice polyphonic synth.
+Changing the order of the messages changes the outcome., f 91;
+#X text 314 358 Hear how changes the sound. You need a 16 note polyphony
+to play it completely.;
+#X msg 74 395 maj 60 \, build 60 13M;
+#X msg 83 418 build 60 T 3M 5p 13M;
+#X text 244 389 add a major 13th on a major triad to build a maj(add13)
+or build it from scratch. Use what you're most confortable with but
+note that the first one shows only the major 6th \, while the latter
+shows the full chord. The final outcome however is the same., f 69
+;
+#X msg 90 554 60 1 0 0 1 0 0 1 0 0 1 0 0 0 1 0 0 1 0 0 1 0 0 1 0;
+#X msg 23 219 build 62 T 3m 5s 7m 9M;
+#X text 194 220 build and play a D minor 9 (sharp 5) chord;
+#X msg 34 247 build 58 T 4p 6m 7M 9m 11p;
+#X text 203 269 build but don't play a sus9 (no5) chord;
+#X msg 48 270 build -1 T 4p 7m 9M;
+#X text 86 452 You can chain velocity and duration messages (even transpose)
+to create dynamic chords: in the example below we set a velocity and
+duration \, then the chord to play (any mode will do). Remember to
+reset velocity and duration as these modification will persist ever
+after. Beware that a new message with new settings will overwrite the
+previous., f 90;
+#X msg 84 508 v 30 \, d 100 \, build 48 T 3m 5p;
+#X msg 85 530 v 64 \, d 500;
+#X connect 0 0 3 0;
+#X connect 8 0 3 0;
+#X connect 9 0 3 0;
+#X connect 12 0 3 0;
+#X connect 13 0 3 0;
+#X connect 15 0 3 0;
+#X connect 16 0 3 0;
+#X connect 18 0 3 0;
+#X connect 20 0 3 0;
+#X connect 22 0 3 0;
+#X connect 23 0 3 0;
+#X restore 182 356 pd advanced_mode;
+#N canvas 137 181 620 385 synth 0;
+#X obj 235 47 inlet;
+#X obj 224 127 pack f f f;
+#X obj 235 75 unpack;
+#X obj 251 290 lop~;
+#X obj 240 347 dac~;
+#X obj 101 101 cnv 15 83 48 empty empty synth 5 7 0 10 -99865 -262144
+0;
+#X obj 166 131 tgl 15 0 empty empty DSP 1 8 0 8 -262144 -1 -1 1 1;
+#X obj 107 131 hsl 53 15 0.01 0.3 1 1 empty empty volume -2 -8 0 10
+-262144 -1 -1 3100 1;
+#X obj 149 120 hsl 30 8 1000 18000 1 1 empty empty filter -2 -8 0 10
+-262144 -1 -1 1400 1;
+#X msg 362 94 \; pd dsp \$1;
+#X obj 251 317 *~;
+#X msg 325 293 \$1 100;
+#X obj 325 316 line~;
+#X obj 139 57 loadbang;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 47 251 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 114 mtof;
+#X obj 46 184 *~;
+#X obj 131 96 / 127;
+#X obj 131 160 line~;
+#X msg 131 128 \$1 100;
+#X obj 46 145 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 7 219 pd osc;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 46 249 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 143 mtof;
+#X obj 46 213 *~;
+#X obj 131 125 / 127;
+#X obj 131 189 line~;
+#X msg 131 157 \$1 100;
+#X obj 46 174 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 55 219 pd osc;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 47 251 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 143 mtof;
+#X obj 46 213 *~;
+#X obj 131 125 / 127;
+#X obj 131 189 line~;
+#X msg 131 157 \$1 100;
+#X obj 46 174 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 103 219 pd osc;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 47 251 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 143 mtof;
+#X obj 46 213 *~;
+#X obj 131 125 / 127;
+#X obj 131 189 line~;
+#X msg 131 157 \$1 100;
+#X obj 46 174 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 151 219 pd osc;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 47 251 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 114 mtof;
+#X obj 46 184 *~;
+#X obj 131 96 / 127;
+#X obj 131 160 line~;
+#X msg 131 128 \$1 100;
+#X obj 46 145 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 199 219 pd osc;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 46 249 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 143 mtof;
+#X obj 46 213 *~;
+#X obj 131 125 / 127;
+#X obj 131 189 line~;
+#X msg 131 157 \$1 100;
+#X obj 46 174 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 247 219 pd osc;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 47 251 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 143 mtof;
+#X obj 46 213 *~;
+#X obj 131 125 / 127;
+#X obj 131 189 line~;
+#X msg 131 157 \$1 100;
+#X obj 46 174 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 295 219 pd osc;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 47 251 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 143 mtof;
+#X obj 46 213 *~;
+#X obj 131 125 / 127;
+#X obj 131 189 line~;
+#X msg 131 157 \$1 100;
+#X obj 46 174 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 343 219 pd osc;
+#X obj 231 102 poly 12 1;
+#X obj 233 171 route 1 2 3 4 5 6 7 8 9 10 11 12;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 47 251 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 114 mtof;
+#X obj 46 184 *~;
+#X obj 131 96 / 127;
+#X obj 131 160 line~;
+#X msg 131 128 \$1 100;
+#X obj 46 145 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 394 218 pd osc;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 46 249 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 143 mtof;
+#X obj 46 213 *~;
+#X obj 131 125 / 127;
+#X obj 131 189 line~;
+#X msg 131 157 \$1 100;
+#X obj 46 174 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 442 218 pd osc;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 47 251 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 143 mtof;
+#X obj 46 213 *~;
+#X obj 131 125 / 127;
+#X obj 131 189 line~;
+#X msg 131 157 \$1 100;
+#X obj 46 174 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 490 218 pd osc;
+#N canvas 234 278 450 300 osc 0;
+#X obj 45 42 inlet;
+#X obj 47 251 outlet~;
+#X obj 45 85 unpack;
+#X obj 46 143 mtof;
+#X obj 46 213 *~;
+#X obj 131 125 / 127;
+#X obj 131 189 line~;
+#X msg 131 157 \$1 100;
+#X obj 46 174 phasor~;
+#X connect 0 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 1 5 0;
+#X connect 3 0 8 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 6 0 4 1;
+#X connect 7 0 6 0;
+#X connect 8 0 4 0;
+#X restore 538 218 pd osc;
+#X connect 0 0 2 0;
+#X connect 1 0 23 0;
+#X connect 2 0 22 0;
+#X connect 2 1 22 1;
+#X connect 3 0 10 0;
+#X connect 6 0 9 0;
+#X connect 7 0 11 0;
+#X connect 8 0 3 1;
+#X connect 10 0 4 0;
+#X connect 10 0 4 1;
+#X connect 11 0 12 0;
+#X connect 12 0 10 1;
+#X connect 13 0 6 0;
+#X connect 14 0 3 0;
+#X connect 15 0 3 0;
+#X connect 16 0 3 0;
+#X connect 17 0 3 0;
+#X connect 18 0 3 0;
+#X connect 19 0 3 0;
+#X connect 20 0 3 0;
+#X connect 21 0 3 0;
+#X connect 22 0 1 0;
+#X connect 22 1 1 1;
+#X connect 22 2 1 2;
+#X connect 23 0 14 0;
+#X connect 23 1 15 0;
+#X connect 23 2 16 0;
+#X connect 23 3 17 0;
+#X connect 23 4 18 0;
+#X connect 23 5 19 0;
+#X connect 23 6 20 0;
+#X connect 23 7 21 0;
+#X connect 23 8 24 0;
+#X connect 23 9 25 0;
+#X connect 23 10 26 0;
+#X connect 23 11 27 0;
+#X connect 24 0 3 0;
+#X connect 25 0 3 0;
+#X connect 26 0 3 0;
+#X connect 27 0 3 0;
+#X coords 0 -1 1 1 85 50 1 100 100;
+#X restore 65 465 pd synth;
+#X text 308 304 Design chord by clicking on the keys and play it.;
+#X text 308 331 Play a predefined chord by calling it by name.;
+#X text 308 357 Build a dynamic custom chord and play it all in one
+message., f 61;
+#X text 202 175 sets the velocity of the chord \, can also use "v"
+;
+#X text 213 195 sets the sustain of the chord \, can also use "d";
+#X text 227 217 transpose the chords \, can also use "t";
+#X text 65 106 See inside the subpatches to check the different ways
+to use it., f 80;
+#X text 641 464 Michele Abruzzese;
+#X text 651 481 @shindeibrauns;
+#X text 664 499 2017.01.31;
+#X text 215 242 change the color of highlighted notes (takes effect
+on next layout modification), f 81;
+#X msg 139 241 color 16;
+#X obj 65 398 chorder2;
+#X text 66 25 CHORDER2;
+#X text 67 52 This abstraction lets you create and play two octave
+chords with ease \, everything you need to do is input a message and
+it will output a series of <note velocity> couples of every note in
+the chord at the root note you specified. See CHORDER1 for the 1 octave
+version., f 95;
+#X text 164 474 Simple synth based on sawtooth oscillators with 12
+notes polyphony and a low-pass filter. Turn on DSP to hear it.;
+#X connect 0 0 20 0;
+#X connect 1 0 20 0;
+#X connect 2 0 20 0;
+#X connect 4 0 20 0;
+#X connect 5 0 20 0;
+#X connect 6 0 20 0;
+#X connect 19 0 20 0;
+#X connect 20 0 7 0;

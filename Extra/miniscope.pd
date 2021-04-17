@@ -1,0 +1,18 @@
+#N canvas 597 319 450 300 10;
+#X obj 282 59 inlet~;
+#X obj 319 130 metro 100;
+#X obj 282 161 tabwrite~ \$0-scope;
+#X obj 101 101 cnv 15 130 50 empty empty empty 20 12 0 14 -162280 -66577
+0;
+#N canvas 122 70 450 245 (subpatch) 0;
+#X array \$0-scope 300 float 0;
+#X coords 0 1 299 -1 130 50 2 0 0;
+#X restore 101 101 graph;
+#X obj 223 101 tgl 8 0 empty empty empty 17 7 0 10 -66577 -4034 -1
+0 1;
+#X obj 97 80 cnv 15 100 15 empty empty empty 20 12 0 14 -162280 -66577
+0;
+#X connect 0 0 2 0;
+#X connect 1 0 2 0;
+#X connect 5 0 1 0;
+#X coords 0 -1 1 1 132 52 2 100 100;

@@ -1,0 +1,125 @@
+#N canvas 414 103 764 586 10;
+#X obj 143 344 88keys;
+#X obj 217 225 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 264 227 nbx 3 14 20 2000 0 1 empty empty speed 0 -8 0 10 -262144
+-1 -1 300 256;
+#X obj 312 228 nbx 3 14 -60 44 0 1 empty empty transpose 0 -8 0 10
+-262144 -1 -1 -12 256;
+#X msg 428 231 84 1 \, 88 63 \, 91 127;
+#X msg 435 253 84 0 \, 88 0 \, 91 0;
+#X obj 595 271 pack f f;
+#X obj 615 219 nbx 3 14 0 127 0 1 empty empty midi_note 0 -8 0 10 -262144
+-1 -1 70 256;
+#X obj 583 219 f;
+#X obj 583 194 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 674 219 nbx 3 14 100 5000 0 1 empty empty duration 0 -8 0 10
+-262144 -1 -1 500 256;
+#X obj 583 245 makenote 64;
+#X msg 418 206 94 64;
+#X msg 467 206 94 0;
+#X text 335 518 Michele Abruzzese (@shindeibrauns) 2017.01.30;
+#X text 32 441 Note in different inlets can eventually conflict between
+each other \, e.g. a |60 0( message on the third inlet can switch off
+the same note from another inlet. If more inlets trigger the same note
+the color shown is from the most recent input received., f 88;
+#X text 439 177 blue inlet;
+#X text 614 177 yellow inlet;
+#X text 33 419 This tool can't output any note \, is just useful as
+a feedback while playing., f 82;
+#N canvas 205 219 450 375 arpeggiator 0;
+#X obj 78 18 inlet;
+#X obj 192 19 inlet;
+#X obj 296 21 inlet;
+#X obj 128 86 metro;
+#X obj 192 45 max 1;
+#X obj 128 108 i;
+#X obj 159 108 + 1;
+#X obj 128 131 mod 8;
+#X obj 128 153 sel 0 1 2 3 4 5 6 7;
+#X msg 65 188 60;
+#X msg 102 188 64;
+#X msg 137 188 67;
+#X msg 172 188 71;
+#X msg 207 188 74;
+#X msg 278 188 81;
+#X msg 312 188 84;
+#X obj 187 217 +;
+#X obj 296 46 clip -60 44;
+#X obj 187 242 makenote 64;
+#X obj 215 301 outlet;
+#X msg 242 188 77;
+#X obj 200 267 pack f f;
+#X connect 0 0 3 0;
+#X connect 1 0 4 0;
+#X connect 2 0 17 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 1;
+#X connect 4 0 18 2;
+#X connect 5 0 6 0;
+#X connect 5 0 7 0;
+#X connect 6 0 5 1;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 8 2 11 0;
+#X connect 8 3 12 0;
+#X connect 8 4 13 0;
+#X connect 8 5 20 0;
+#X connect 8 6 14 0;
+#X connect 8 7 15 0;
+#X connect 9 0 16 0;
+#X connect 10 0 16 0;
+#X connect 11 0 16 0;
+#X connect 12 0 16 0;
+#X connect 13 0 16 0;
+#X connect 14 0 16 0;
+#X connect 15 0 16 0;
+#X connect 16 0 18 0;
+#X connect 17 0 16 1;
+#X connect 18 0 21 0;
+#X connect 18 1 21 1;
+#X connect 20 0 16 0;
+#X connect 21 0 19 0;
+#X restore 217 256 pd arpeggiator;
+#X obj 78 261 pack;
+#X text 231 190 green inlet;
+#X text 65 206 red inlet;
+#X obj 68 237 notein 1;
+#X text 26 25 88KEYS;
+#X text 24 50 This abstraction provides a way to represent on a full
+keyboard the notes played by a midi instrument (or similar). Each of
+the 4 inlets takes as valid input a message containing one or more
+couple <note velocity>. A note is on when its velocity is not 0 and
+its colour changes according to the inlet used (red \, green \, blue
+\, yellow from left to right). A note is switched off when its velocity
+is 0, f 94;
+#X text 23 119 88keys shows a full piano extension from A0 (22) to
+C8 (108). Use 128keys for a full midi range., f 96;
+#X text 323 372 C4;
+#X text 379 372 C5;
+#X text 436 372 C6;
+#X text 491 372 C7;
+#X text 549 372 C8;
+#X text 266 372 C3;
+#X text 209 372 C2;
+#X text 155 372 C1;
+#X connect 1 0 19 0;
+#X connect 2 0 19 1;
+#X connect 3 0 19 2;
+#X connect 4 0 0 2;
+#X connect 5 0 0 2;
+#X connect 6 0 0 3;
+#X connect 7 0 8 1;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X connect 10 0 11 2;
+#X connect 11 0 6 0;
+#X connect 11 1 6 1;
+#X connect 12 0 0 2;
+#X connect 13 0 0 2;
+#X connect 19 0 0 1;
+#X connect 20 0 0 0;
+#X connect 23 0 20 0;
+#X connect 23 1 20 1;
