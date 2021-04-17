@@ -1,0 +1,16 @@
+#N canvas 0 50 450 300 12;
+#X obj 241 59 expr (2*$f1/(1-$f1));
+#X obj 59 103 expr~ ((1+$f3)*$v1/(1+$f3*$v2));
+#X obj 149 60 abs~;
+#X obj 59 170 outlet~;
+#X obj 59 37 +~ 0.02;
+#X obj 59 10 inlet~ AudioIN;
+#X obj 241 10 inlet Headroom;
+#X text 253 36 range (0-1);
+#X connect 0 0 1 2;
+#X connect 1 0 3 0;
+#X connect 2 0 1 1;
+#X connect 4 0 1 0;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 6 0 0 0;

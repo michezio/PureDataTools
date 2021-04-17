@@ -1,0 +1,12 @@
+#N canvas 658 244 450 300 10;
+#X obj 54 87 biquad_losh~ 100 -1;
+#X obj 54 147 biquad_peak~ 430 3 -10;
+#X obj 54 117 biquad_peak~ 30 3 6.5;
+#X obj 54 177 biquad_peak~ 7500 3 6;
+#X obj 44 33 inlet~;
+#X obj 40 231 outlet~;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 1 0;
+#X connect 3 0 5 0;
+#X connect 4 0 0 0;

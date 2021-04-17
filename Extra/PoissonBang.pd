@@ -1,0 +1,40 @@
+#N canvas 478 58 402 325 10;
+#X obj 58 82 nbx 5 14 1 1000 0 1 \$0-freq \$0-freqr FREQUENCY 0 -8
+0 10 -262144 -1 -1 100 256;
+#X obj 119 92 tgl 23 1 \$0-toggle \$0-toggler empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 182 91 r \$0-toggle;
+#X obj 182 217 moses;
+#X obj 209 190 r \$0-freq;
+#X obj 182 158 random 1000;
+#X obj 182 249 bang;
+#X obj 182 283 outlet;
+#X obj 184 7 inlet;
+#X obj 314 59 bang;
+#X obj 184 58 s \$0-freqr;
+#X msg 269 120 1;
+#X msg 301 120 0;
+#X obj 269 148 s \$0-toggler;
+#X obj 86 225 r \$0-int;
+#X obj 182 117 metro;
+#X obj 184 31 route freq play int stop;
+#X obj 289 86 s \$0-intr;
+#X obj 58 112 nbx 5 14 1 100000 0 1 \$0-int \$0-intr INTERVAL 0 -8
+0 10 -262144 -1 -1 100 256;
+#X connect 2 0 15 0;
+#X connect 3 0 6 0;
+#X connect 4 0 3 1;
+#X connect 5 0 3 0;
+#X connect 6 0 7 0;
+#X connect 8 0 16 0;
+#X connect 9 0 5 0;
+#X connect 11 0 13 0;
+#X connect 12 0 13 0;
+#X connect 14 0 15 1;
+#X connect 15 0 5 0;
+#X connect 16 0 10 0;
+#X connect 16 1 11 0;
+#X connect 16 2 12 0;
+#X connect 16 3 17 0;
+#X connect 16 4 9 0;
+#X coords 0 -1 1 1 100 85 1 50 50;

@@ -1,0 +1,60 @@
+#N canvas 54 50 1304 726 16;
+#X obj 27 27 vu 15 120 \$0-vuR empty -1 -8 0 10 -66577 -1 1 0;
+#X obj 618 465 env~;
+#X obj 618 493 - 100;
+#X obj 7 27 vu 15 120 \$0-vuL empty -1 -8 0 10 -66577 -1 0 0;
+#X obj 618 521 s \$0-vuR;
+#X obj 402 465 env~;
+#X obj 402 493 - 100;
+#X obj 402 521 s \$0-vuL;
+#X obj 257 17 inlet~ L;
+#X obj 573 16 inlet~ R;
+#X obj 574 107 spigot~;
+#X obj 574 74 spigot~;
+#X obj 401 366 *~;
+#X msg 436 304 \$1 50;
+#X obj 509 431 dac~;
+#X obj 693 59 tgl 15 0 empty \$0-stereo empty 17 7 0 10 -262144 -1
+-1 1 1;
+#X obj 102 105 tgl 15 1 \$0-stereo empty STR -1 22 0 10 -262144 -1
+-1 1 1;
+#X obj 621 365 *~;
+#X obj 413 142 clip~ -1 1;
+#X obj 612 247 clip~ -1 1;
+#X obj 347 104 spigot~;
+#X obj 544 213 spigot~;
+#X obj 519 110 tgl 15 0 empty \$0-clip empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 102 75 tgl 15 0 \$0-clip empty CLIP -4 22 0 10 -262144 -1 -1
+0 1;
+#X obj 436 331 line;
+#X obj 78 30 vsl 15 100 0 1 0 0 empty empty LEVEL 0 110 0 10 -262144
+-1 -1 6500 1;
+#X connect 1 0 2 0;
+#X connect 2 0 4 0;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 8 0 20 0;
+#X connect 8 0 10 0;
+#X connect 9 0 11 0;
+#X connect 10 0 21 0;
+#X connect 11 1 21 0;
+#X connect 12 0 5 0;
+#X connect 12 0 14 0;
+#X connect 13 0 24 0;
+#X connect 15 0 11 1;
+#X connect 15 0 10 1;
+#X connect 17 0 1 0;
+#X connect 17 0 14 1;
+#X connect 18 0 12 0;
+#X connect 19 0 17 0;
+#X connect 20 0 12 0;
+#X connect 20 1 18 0;
+#X connect 21 0 17 0;
+#X connect 21 1 19 0;
+#X connect 22 0 20 1;
+#X connect 22 0 21 1;
+#X connect 24 0 12 1;
+#X connect 24 0 17 1;
+#X connect 25 0 13 0;
+#X coords 0 -1 1 1 125 155 1 0 0;

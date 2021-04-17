@@ -1,0 +1,10 @@
+#N canvas 492 346 450 300 10;
+#X obj 100 59 inlet;
+#X obj 101 127 sig~;
+#X obj 101 156 outlet~;
+#X obj 100 100 nbx 5 14 -1e+037 1e+037 0 0 empty empty empty 0 -8 0
+10 -191407 -1 -1 334.32 256;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 0;
+#X coords 0 -1 1 1 54 14 2 100 100;

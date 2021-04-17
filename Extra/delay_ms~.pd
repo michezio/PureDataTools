@@ -1,0 +1,12 @@
+#N canvas 610 335 450 300 10;
+#X obj 41 98 delwrite~ \$0-delay \$1;
+#X obj 43 217 delread4~ \$0-delay \$2;
+#X obj 228 77 inlet~ DELAY_TIME_MS;
+#X obj 41 76 inlet~ AUDIO_IN;
+#X obj 43 241 outlet~ AUDIO_OUT;
+#X text 39 21 arguments: \$1 : max delay time (ms) \$2 : initial delay
+time (ms);
+#X obj 270 28 block~ 8;
+#X connect 1 0 4 0;
+#X connect 2 0 1 0;
+#X connect 3 0 0 0;
