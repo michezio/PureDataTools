@@ -31,4 +31,6 @@ To use them simply copy-paste the abstraction (and its dependancies) into you Pd
 
 `keyboard`: keyboards (88 or 128 keys) to show midi notes played by up to 4 different sources.
 
+`BiquadHelpers~`: Filters automating the creation of coefficients for the biquad filter.
+
 `Extras`: everything yet to be completed or that needs an help patch.
