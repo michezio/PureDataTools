@@ -63,9 +63,9 @@ from different chords will be repeated on different oscillators.;
 0;
 #X obj 166 131 tgl 15 0 empty empty DSP 1 8 0 8 -262144 -1 -1 1 1;
 #X obj 107 131 hsl 53 15 0.01 0.3 1 1 empty empty volume -2 -8 0 10
--262144 -1 -1 3100 1;
+-262144 -1 -1 5200 1;
 #X obj 149 120 hsl 30 8 1000 18000 1 1 empty empty filter -2 -8 0 10
--262144 -1 -1 1400 1;
+-262144 -1 -1 2900 1;
 #X msg 362 94 \; pd dsp \$1;
 #X obj 251 317 *~;
 #X msg 325 293 \$1 100;
@@ -276,8 +276,6 @@ polyphony and a low-pass filter. Turn on DSP to hear it.;
 #X text 65 106 See inside the subpatches to check the different ways
 to use it., f 80;
 #X text 641 464 Michele Abruzzese;
-#X text 651 481 @shindeibrauns;
-#X text 664 499 2017.01.31;
 #X obj 212 426 print;
 #X obj 65 399 makechord;
 #X text 66 25 MAKECHORD;
@@ -326,13 +324,14 @@ note writing only the grades you want to add \, omitting the tonic
 wrote in the message. Refere to the following nomenclature for grades.
 , f 95;
 #X text 207 247 build and play a B flat "strange" chord;
-#X text 231 388 add a major 6th on a minor triad to build a minmaj6
-or build it from scratch. Use what you're most confortable with note
-that the first one retains only the major 6th \, while the latter retains
-the full chord. The final outcome however is the same., f 69;
 #X text 100 579 Well \, if you are even nerdier you can build chord
 the hard way by explicitly tell which notes of the octave are on and
 which are off in a "boolean" way. This is a C dim7 chord., f 85;
+#X text 231 388 add a major 6th on a minor triad to build a minmaj6
+or build it from scratch. Use what you're most confortable with \,
+but note that the first one retains only the major 6th \, while the
+latter retains the full chord. The final outcome however is the same.
+, f 69;
 #X connect 0 0 7 0;
 #X connect 2 0 7 0;
 #X connect 3 0 7 0;
@@ -348,16 +347,18 @@ which are off in a "boolean" way. This is a C dim7 chord., f 85;
 #X text 308 301 Play a predefined chord shape using its name.;
 #X text 308 327 Build and play a dynamic custom chord shape., f 45
 ;
+#X text 668 481 @michezio;
 #X text 67 52 This abstraction lets you create and play one octave
 chords with ease \, everything you need to do is input a message and
-it will output a series of <note velocity> couples of every note in
-the chord at the root note you specified. The last chord shape used
+it will output a series of <note \, velocity> tuples of every note
+in the chord at the root note you specified. The last chord shape used
 will be retained after it's used so \, if not explicitly changed \,
 will stay the same and can be used with a different root., f 95;
-#X connect 0 0 15 0;
-#X connect 1 0 15 0;
-#X connect 2 0 15 0;
-#X connect 4 0 15 0;
-#X connect 15 0 5 0;
-#X connect 15 1 14 0;
-#X connect 17 0 15 0;
+#X text 664 499 2017.08.21;
+#X connect 0 0 13 0;
+#X connect 1 0 13 0;
+#X connect 2 0 13 0;
+#X connect 4 0 13 0;
+#X connect 13 0 5 0;
+#X connect 13 1 12 0;
+#X connect 15 0 13 0;

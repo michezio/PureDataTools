@@ -1,16 +1,16 @@
 # PureData
 
-_WORK IN PROGRESS_ A collection of tools, GUIs, FX and other stuff designed for PD Vanilla without external libraries.
+A continuously evolving collection of tools, GUIs, FX and other stuff designed for PD Vanilla with no external library required.
 
 ## Prerequisites
 
-* PureData Vanilla 0.47 (no external libraries needed unless explicitly reported)
+* PureData Vanilla 0.46+ (no external libraries needed unless explicitly reported)
 
 These patches/abstractions have been developed and tested on Windows 7/10 and Ubuntu Linux on Pd Vanilla 0.46 and up. I don't know if they work on previous versions or on other operating systems.
 
 ## Installing
 
-Most of abstractions don't have dependancies, so you can use each of them by themselves except in few rare cases and it will be notified. Many patches depend on more than one abstraction and in that case it will be reported which one. Most of the abstractions come with a help patch but not all of them.
+Most of abstractions don't have dependancies, so you can use each of them by themselves except in few rare (where it is explicitly notified). Many patches depend on more than one abstraction and in that case it will be reported which one (most likely they are included in the same folder). Most of the abstractions come with an help patch.
 
 To use them simply copy-paste the abstraction (and its dependancies) into you Pd working or search folder, then recall it with its name. You can eventually:
 * Put the abstractions into the same folder as the patch that uses them.
@@ -19,13 +19,16 @@ To use them simply copy-paste the abstraction (and its dependancies) into you Pd
 
 ## Content
 
-* GUI - a collection of graphic elements for a bit of eye-candy.
-* FX - audio effects (tremolo, reverb, delay, pitch-shift, distortion...)
-* TOOLS - conversion tools, math blocks, audio math stuff and other things.
-* CONTROLS - midi and osc control blocks, triggers, sequencers and others.
-* VST - a series of GUI based elements that work just like VSTs.
-* PATCH - collection of patches that use many different abstractions.
-* Extra - Everything else, not yet classified nor refined and without helpers.
+`miniscope~`: mini oscilloscope to quickly probe a signal outlet.
 
-### License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+`FunctionPlotter`: shows the plot of a function made of blocks or expr.
+
+`FrequencyResponse~`: shows the amplitude frequency response plot of a filter.
+
+`sliders`: array of 5, 10 and 20 vertical sliders, controllable with lists.
+
+`makechord`: generate a series of midi notes given a chord shape and its root note.
+
+`keyboard`: keyboards (88 or 128 keys) to show midi notes played by up to 4 different sources.
+
+`Extras`: everything yet to be completed or that needs an help patch.

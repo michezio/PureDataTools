@@ -1,0 +1,27 @@
+#N canvas 78 289 586 300 10;
+#X obj 282 59 inlet~;
+#X obj 302 160 metro 100;
+#X obj 101 101 cnv 15 130 50 empty empty empty 20 12 0 14 -162280 -66577
+0;
+#N canvas 122 70 450 245 (subpatch) 0;
+#X array \$0-miniscope 300 float 0;
+#X coords 0 1 299 -1 130 50 2 0 0;
+#X restore 101 101 graph;
+#X obj 223 101 tgl 8 1 empty empty empty 17 7 0 10 -66577 -4034 -1
+1 1;
+#X obj 265 191 tabwrite~ \$0-miniscope;
+#X obj 370 89 i \$1;
+#X obj 370 39 loadbang;
+#X obj 287 128 expr if($f1 > 0 \, $f1 \, 100);
+#X obj 461 46 inlet;
+#X text 83 186 Michele Abruzzese;
+#X text 106 206 @michezio;
+#X text 102 226 2017.07.10;
+#X connect 0 0 5 0;
+#X connect 1 0 5 0;
+#X connect 4 0 1 0;
+#X connect 6 0 8 0;
+#X connect 7 0 6 0;
+#X connect 8 0 1 1;
+#X connect 9 0 6 0;
+#X coords 0 -1 1 1 132 52 2 100 100;

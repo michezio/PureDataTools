@@ -1,5 +1,5 @@
 #N canvas 414 103 764 586 10;
-#X obj 143 344 88keys;
+#X obj 143 344 keys88;
 #X obj 217 225 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 264 227 nbx 3 14 20 2000 0 1 empty empty speed 0 -8 0 10 -262144

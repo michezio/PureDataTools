@@ -1,0 +1,25 @@
+#N canvas 335 48 757 616 12;
+#X obj 350 287 FunctionPlotter;
+#X text 76 73 This tool can plot the graph of a function in a given
+interval (X-min \, X-max \, Y-min \, Y-max) with a resolution defined
+with the variable Size. Also both X and Y coordinates can be logarithmic
+(X-log and Y-log toggles). To use it simply connect the output of the
+plotter to the input of your function and the output of your function
+to the inlet of the plotter and press the bang on it., f 87;
+#X obj 350 525 s plt_out;
+#X obj 112 286 r plt_out;
+#X obj 110 476 s plt_in;
+#X obj 350 256 r plt_in;
+#X obj 88 379 expr pow($f1 \, 3) * tan($f1*5);
+#X text 613 319 <- press here;
+#X text 78 526 Michele Abruzzese;
+#X text 106 547 @michezio;
+#X text 102 567 2021.10.07;
+#X text 76 160 WARNING: This tool can be computationally intensive
+with complex functions. Do not use it during live performances and
+consider turning off the DSP when using this tool., f 87;
+#X text 75 31 FunctionPlotter;
+#X connect 0 0 2 0;
+#X connect 3 0 6 0;
+#X connect 5 0 0 0;
+#X connect 6 0 4 0;

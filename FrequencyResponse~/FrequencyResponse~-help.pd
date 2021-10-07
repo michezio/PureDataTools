@@ -1,0 +1,49 @@
+#N canvas 623 25 634 654 12;
+#X text 16 6 Frequency Response;
+#X obj 216 356 FrequencyResponse~;
+#X obj 216 503 s~ plt_out;
+#X obj 66 310 r~ plt_out;
+#X obj 66 524 s~ plt_in;
+#X obj 216 294 r~ plt_in;
+#X obj 66 492 hip~ 100;
+#X obj 66 439 lop~ 4000;
+#X obj 66 396 lop~ 4000;
+#X obj 66 417 lop~ 4000;
+#X text 16 36 This tool allows to empirically check the frequency response
+of a filter (or generally an LTI system). It generates a pure sine
+tone ranging from X-min to X-max Hz and output the amplitude in dB
+of the signal received passing through the filter., f 85;
+#X text 16 114 SWEEP - (toggle under block) logarithmic sweep if not
+selected \, else linear., f 85;
+#X text 16 82 BLOCK - select a block size (512 \, 1024 \, 2048 \, 4096).
+Larger block sizes provide higher accurancy on low frequencies but
+hit harder on CPU., f 85;
+#X text 16 132 SIZE - The resolution of the plot., f 85;
+#X text 16 150 TIME - The time the sweep takes to go from X-min to
+X-max. Longer times provide better accuracy., f 85;
+#X text 16 182 RANGES - X-min and X-max control the minimum and maximum
+frequency of the plot \, Y-min and Y-max the range of dB values to
+show. A green line in the plot signal the 0 dB reference point., f
+85;
+#X obj 516 494 unpack;
+#X floatatom 476 525 7 0 0 0 - - -;
+#X floatatom 544 525 7 0 0 0 - - -;
+#X text 476 547 Freq Hz;
+#X text 544 547 Amp dB;
+#X text 16 228 The slider under the plot shows the current frequency
+that's being computed. Once the plot has been generated you can scroll
+it to a certain frequency to see its amplitude value unpacking the
+values from the outlet on the right., f 85;
+#X text 238 567 Michele Abruzzese;
+#X text 265 588 @michezio;
+#X text 263 607 2021.10.07;
+#X connect 1 0 2 0;
+#X connect 1 1 16 0;
+#X connect 3 0 8 0;
+#X connect 5 0 1 0;
+#X connect 6 0 4 0;
+#X connect 7 0 6 0;
+#X connect 8 0 9 0;
+#X connect 9 0 7 0;
+#X connect 16 0 17 0;
+#X connect 16 1 18 0;

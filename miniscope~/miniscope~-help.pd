@@ -1,0 +1,15 @@
+#N canvas 597 319 450 300 10;
+#X obj 57 200 miniscope~;
+#X text 40 21 miniscope~;
+#X floatatom 182 165 5 0 0 0 - - -;
+#X text 39 54 Small oscilloscope to quickly probe signals around your
+patch., f 63;
+#X text 39 78 The right inlet sets the update time in ms \, settable
+also throug an argument upon creation (default 100 ms), f 63;
+#X obj 57 152 osc~ 440;
+#X text 289 196 Michele Abruzzese;
+#X text 312 213 @michezio;
+#X text 309 231 2021.10.07;
+#X connect 2 0 0 1;
+#X connect 5 0 0 0;
+#X coords 0 300 1 299 132 52 0;
