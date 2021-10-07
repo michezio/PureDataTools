@@ -1,4 +1,4 @@
-## Biquad filter helpers
+# Biquad filter helpers
 
 Biquadratic filters are very flexibles and can generate almost every kind of second order filter, but it's quite complex to calculate the right coefficients for each single case. That's why I created these helpers that generate different types of filters using common parameters such as central frequency, bandwidth or slope, gain/attenuation and so on.
 
