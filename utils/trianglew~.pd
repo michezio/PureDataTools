@@ -1,0 +1,17 @@
+#N canvas 769 292 450 352 10;
+#X obj 167 226 outlet~ audioOUT;
+#X msg 211 55 0;
+#X obj 165 143 phasor~;
+#X obj 165 15 loadbang;
+#X obj 165 38 f \$1;
+#X obj 165 167 expr~ 2*abs($v1-0.5);
+#X obj 40 86 inlet~ frequency;
+#X obj 283 79 inlet phase;
+#X connect 1 0 2 1;
+#X connect 2 0 5 0;
+#X connect 3 0 1 0;
+#X connect 3 0 4 0;
+#X connect 4 0 2 0;
+#X connect 5 0 0 0;
+#X connect 6 0 2 0;
+#X connect 7 0 2 1;

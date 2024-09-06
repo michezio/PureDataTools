@@ -1,0 +1,15 @@
+#N canvas 317 177 450 300 10;
+#X obj 154 162 expr~ $v1 > 0.5;
+#X obj 222 116 inlet phase;
+#X obj 153 191 outlet~ soundOUT;
+#X text 131 27 Generate a SQUARE WAVE;
+#X obj 154 133 phasor~;
+#X obj 154 82 f \$1;
+#X obj 154 59 loadbang;
+#X obj 35 83 inlet~ frequency;
+#X connect 0 0 2 0;
+#X connect 1 0 4 1;
+#X connect 4 0 0 0;
+#X connect 5 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;

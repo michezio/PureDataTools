@@ -1,4 +1,4 @@
-# Biquad filter helpers
+# Biquad filters
 
 Biquadratic filters are very flexibles and can generate almost every kind of second order filter, but it's quite complex to calculate the right coefficients for each single case. That's why I created these helpers that generate different types of filters using common parameters such as central frequency, bandwidth or slope, gain/attenuation and so on.
 
@@ -21,6 +21,8 @@ In case we are using `BW` or `S` we can get `Q` with the following formulas:
 
 Another "variable" that's quite useful with shelving filters is the following:  
 ![](https://latex.codecogs.com/svg.image?2\alpha\sqrt{A}=sin({\omega}_0)\sqrt{\left(A^2+1\right)\left(\frac{1}{S}-1\right)+2A})  
+
+## Content
 
 ### `[bq_lowpass~ fc Q]` Low-Pass Filter
 
@@ -108,7 +110,10 @@ For the all-pass filter, `fc` and `Q` influence the behaviour in the phase respo
 ![](https://latex.codecogs.com/svg.image?b_2=A(A+1+(A-1)cos({\omega}_0)-2\alpha\sqrt{A}))  
   
   
-  
+## Extra
+
+All the other abstractions are compound filters made of different biquadratic ones that aproximate the frequency response of real speakers and tube amplifiers. I use them at the end of a guitar effect chain to simulate the cabinet.
+
 ## Credits
 
 All formulas taken from [Audio EQ Cookbook by Robert Bristow-Johnson](https://webaudio.github.io/Audio-EQ-Cookbook/audio-eq-cookbook.html)
