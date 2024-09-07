@@ -1,0 +1,23 @@
+#N canvas 304 392 536 417 10;
+#X obj 188 222 spigot~;
+#X obj 227 203 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 233 157 hsl 128 15 1 100 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 189 172 *~ 10;
+#X obj 114 73 inlet~ AUDIO IN;
+#X obj 233 75 inlet GAIN;
+#X obj 317 76 inlet TYPE;
+#X obj 188 310 outlet~ AUDIO OUT;
+#X obj 188 249 expr~ atan($v1);
+#X obj 296 251 expr~ tanh($v1);
+#X connect 0 0 8 0;
+#X connect 0 1 9 0;
+#X connect 1 0 0 1;
+#X connect 2 0 3 1;
+#X connect 3 0 0 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 1;
+#X connect 6 0 1 0;
+#X connect 8 0 7 0;
+#X connect 9 0 7 0;

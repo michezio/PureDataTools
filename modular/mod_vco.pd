@@ -1,8 +1,7 @@
-#N canvas 374 222 777 531 10;
-#X obj 101 102 cnv 15 48 146 empty empty FRE_MOD_SHA 2 6 0 5 -233017
--66577 0;
-#X obj 101 238 cnv 10 48 10 empty empty SIN_SQR_SAW 2 6 0 5 -233017
--66577 0;
+#N canvas 374 218 777 531 10;
+#X declare -path moonlib;
+#X obj 101 102 cnv 15 48 146 empty empty FRE_MOD_SHA 2 6 0 5 #e0e0e0 #404040 0;
+#X obj 101 238 cnv 10 48 10 empty empty SIN_SQR_SAW 2 6 0 5 #e0e0e0 #404040 0;
 #X obj 286 66 inlet~;
 #X obj 352 66 inlet~;
 #X obj 424 240 *~;
@@ -12,17 +11,13 @@
 #X obj 285 467 outlet~;
 #X msg 443 197 \$1 50;
 #X obj 443 218 line~;
-#X obj 104 119 mknob 25 100 1 100 0 0 \$0-freq \$0-bar empty -2 -6
-0 8 -99865 -262144 -1 4700 1;
-#X obj 125 143 mknob 20 100 -1 1 0 0 \$0-fine \$0-bar empty -2 -6 0
-8 -191407 -99865 -1 6600 1;
-#X obj 126 186 mknob 20 100 0 1 0 0 \$0-shape \$0-bar empty -2 -6 0
-8 -191407 -99865 -1 0 1;
+#X obj 104 119 mknob 25 100 1 100 0 0 \$0-freq \$0-bar empty -2 -6 0 8 #606060 #fcfcfc #000000 0 1;
+#X obj 125 143 mknob 20 100 -1 1 0 0 \$0-fine \$0-bar empty -2 -6 0 8 #b8b8b8 #606060 #000000 0 1;
+#X obj 126 186 mknob 20 100 0 1 0 0 \$0-shape \$0-bar empty -2 -6 0 8 #b8b8b8 #606060 #000000 0 1;
 #X obj 323 97 r \$0-freq;
 #X obj 443 178 r \$0-mod;
 #X obj 424 66 inlet~;
-#X obj 135 122 tgl 10 0 \$0-freqinput \$0-bar empty 17 7 0 10 -99865
--262144 -1 0 1;
+#X obj 135 122 tgl 10 0 \$0-freqinput \$0-bar empty 17 7 0 10 #606060 #fcfcfc #000000 0 1;
 #X obj 306 372 +~;
 #X msg 371 148 \$1 50;
 #X obj 371 169 line~;
@@ -31,16 +26,14 @@
 #X obj 286 343 *~;
 #X obj 298 321 == 0;
 #X obj 271 300 r \$0-freqinput;
-#X obj 126 211 mknob 20 100 0 1 0 0 \$0-mod \$0-bar empty -2 -6 0 8
--191407 -99865 -1 0 1;
+#X obj 126 211 mknob 20 100 0 1 0 0 \$0-mod \$0-bar empty -2 -6 0 8 #b8b8b8 #606060 #000000 0 1;
 #X obj 71 441 +;
 #X obj 71 416 t b f;
-#X floatatom 104 168 6 0 0 0 - #0-fff #0-foo, f 6;
+#X floatatom 104 168 6 0 0 0 - \$0-fff \$0-foo 0;
 #X obj 130 510 s \$0-fff;
 #X obj 71 387 r \$0-fine;
 #X obj 50 350 r \$0-freq;
-#X obj 106 187 vradio 15 1 0 3 \$0-range \$0-bar empty 0 -8 0 10 -99865
--262144 -1 2;
+#X obj 106 187 vradio 15 1 0 3 \$0-range \$0-bar empty 0 -8 0 10 #606060 #fcfcfc #000000 0;
 #X obj 148 402 sel 0 1 2;
 #X obj 130 478 *;
 #X obj 148 383 r \$0-range;
@@ -71,8 +64,7 @@
 #X obj 700 266 lop~ 18000;
 #X obj 837 154 expr~ if($v1<$v2 \, 1 \, 0);
 #X obj 949 176 expr~ 1-$v1;
-#X obj 700 202 expr~ 2*($v3*($v1/($v2+0.00001))+($v4*((1-$v1))/(1-$v2+0.00001)))-1
-, f 67;
+#X obj 700 202 expr~ 2*($v3*($v1/($v2+0.00001))+($v4*((1-$v1))/(1-$v2+0.00001)))-1, f 67;
 #X connect 1 0 7 0;
 #X connect 1 0 3 0;
 #X connect 1 0 15 0;
@@ -111,6 +103,7 @@
 #X msg 596 220 10;
 #X msg 561 220 100;
 #X obj 543 272 *~;
+#X obj 44 26 declare -path moonlib;
 #X connect 2 0 40 0;
 #X connect 3 0 4 0;
 #X connect 4 0 18 1;

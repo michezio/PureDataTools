@@ -1,0 +1,33 @@
+#N canvas 0 94 1280 930 10;
+#X obj 32 239 expr (2*$f1/(1-$f1));
+#X obj -161 351 expr~ ((1+$f3)*$v1/(1+$f3*$v2));
+#X obj -81 200 mknob 32 32 1 100 1 0 empty empty empty 0 -8 0 8 -262144
+-1 -1 0 1;
+#X obj -109 278 abs~;
+#X obj 118 183 hsl 128 15 0 0.999 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 0 1;
+#X obj 169 114 loadbang;
+#X floatatom 136 204 5 0 0 0 - - -;
+#X msg 137 150 0.707;
+#X obj -118 405 clip~ -1.5 1.5;
+#X obj -128 79 inlet~ AUDIO IN;
+#X obj 2 79 inlet GAIN;
+#X obj 89 83 inlet THRESHOLD;
+#X obj 86 130 * 0.95;
+#X obj -111 471 outlet~ AUDIO OUT;
+#X obj -175 217 *~ 1;
+#X connect 0 0 1 2;
+#X connect 1 0 8 0;
+#X connect 2 0 14 1;
+#X connect 3 0 1 1;
+#X connect 4 0 0 0;
+#X connect 4 0 6 0;
+#X connect 5 0 7 0;
+#X connect 7 0 4 0;
+#X connect 8 0 13 0;
+#X connect 9 0 14 0;
+#X connect 10 0 14 1;
+#X connect 11 0 12 0;
+#X connect 12 0 4 0;
+#X connect 14 0 1 0;
+#X connect 14 0 3 0;

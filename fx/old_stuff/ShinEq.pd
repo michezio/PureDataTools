@@ -1,0 +1,56 @@
+#N canvas 0 94 1280 930 10;
+#X obj 253 206 *~;
+#X obj 449 206 *~;
+#X obj 377 132 sig~;
+#X obj 349 206 *~;
+#X obj 349 161 vcf~ 2;
+#X obj 280 253 vsl 15 128 0 4 0 0 empty empty bass 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 376 253 vsl 15 128 0 5 0 0 empty empty mid 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 476 253 vsl 15 128 0 3 0 0 empty empty treble 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 370 405 mknob 32 32 500 2000 1 0 empty empty freq 0 -8 0 8 -262144
+-1 -1 0 1;
+#X floatatom 377 106 5 0 0 0 - - -;
+#X obj 29 351 outlet~ audioOUT;
+#X obj 27 17 inlet~ audioIN;
+#X obj 229 118 f \$1;
+#X obj 267 117 f \$2;
+#X obj 305 117 f \$3;
+#X obj 270 78 loadbang;
+#X obj 182 16 inlet bass;
+#X obj 305 20 inlet mid;
+#X obj 430 20 inlet treble;
+#X obj 550 22 inlet freq;
+#X obj 349 79 hip~ 300;
+#X obj 349 55 lop~ 3000;
+#X obj 253 161 lop~ 300;
+#X obj 448 161 hip~ 3000;
+#X connect 0 0 10 0;
+#X connect 1 0 10 0;
+#X connect 2 0 4 1;
+#X connect 3 0 10 0;
+#X connect 4 0 3 0;
+#X connect 5 0 0 1;
+#X connect 6 0 3 1;
+#X connect 7 0 1 1;
+#X connect 8 0 9 0;
+#X connect 9 0 2 0;
+#X connect 11 0 21 0;
+#X connect 11 0 22 0;
+#X connect 11 0 23 0;
+#X connect 12 0 22 1;
+#X connect 13 0 9 0;
+#X connect 14 0 23 1;
+#X connect 15 0 12 0;
+#X connect 15 0 13 0;
+#X connect 15 0 14 0;
+#X connect 16 0 0 1;
+#X connect 17 0 3 1;
+#X connect 18 0 1 1;
+#X connect 19 0 9 0;
+#X connect 20 0 4 0;
+#X connect 21 0 20 0;
+#X connect 22 0 0 0;
+#X connect 23 0 1 0;

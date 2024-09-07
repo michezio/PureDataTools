@@ -1,10 +1,8 @@
-#N canvas 235 335 777 531 10;
-#X obj 101 102 cnv 15 48 146 empty empty empty 20 12 0 14 -233017 -66577
-0;
-#X obj 101 102 cnv 10 48 10 empty empty I1_M1_I2_M2 3 6 0 5 -233017
--66577 0;
-#X obj 101 238 cnv 10 48 10 empty empty OUT1___OUT2 3 6 0 5 -233017
--66577 0;
+#N canvas 233 118 777 531 10;
+#X declare -path moonlib;
+#X obj 101 102 cnv 15 48 146 empty empty empty 20 12 0 14 #e0e0e0 #404040 0;
+#X obj 101 102 cnv 10 48 10 empty empty I1_M1_I2_M2 3 6 0 5 #e0e0e0 #404040 0;
+#X obj 101 238 cnv 10 48 10 empty empty OUT1___OUT2 3 6 0 5 #e0e0e0 #404040 0;
 #X obj 286 66 inlet~;
 #X obj 350 66 inlet~;
 #X obj 351 169 *~;
@@ -28,17 +26,14 @@
 #X obj 540 147 line~;
 #X obj 540 107 r \$0-mod2;
 #X obj 480 198 r \$0-gain2;
-#X obj 105 117 mknob 30 100 -60 60 0 0 \$0-gain1 \$0-bar empty -2 -6
-0 8 -99865 -262144 -1 2000 1;
+#X obj 105 117 mknob 30 100 -60 60 0 0 \$0-gain1 \$0-bar empty -2 -6 0 8 #606060 #fcfcfc #000000 0 1;
 #X obj 310 281 expr~ pow(10 \, $v1/20);
-#X obj 105 181 mknob 30 100 -120 0 0 0 \$0-gain2 \$0-bar empty -2 -6
-0 8 -99865 -262144 -1 4900 1;
-#X obj 125 148 mknob 20 100 0 1 0 0 \$0-mod1 \$0-bar empty -2 -6 0
-8 -191407 -99865 -1 8000 1;
-#X obj 125 212 mknob 20 100 0 60 0 0 \$0-mod2 \$0-bar empty -2 -6 0
-8 -191407 -99865 -1 5800 1;
+#X obj 105 181 mknob 30 100 -120 0 0 0 \$0-gain2 \$0-bar empty -2 -6 0 8 #606060 #fcfcfc #000000 0 1;
+#X obj 125 148 mknob 20 100 0 1 0 0 \$0-mod1 \$0-bar empty -2 -6 0 8 #b8b8b8 #606060 #000000 0 1;
+#X obj 125 212 mknob 20 100 0 60 0 0 \$0-mod2 \$0-bar empty -2 -6 0 8 #b8b8b8 #606060 #000000 0 1;
 #X obj 480 280 expr~ pow(10 \, $v1/20);
 #X obj 310 258 +~;
+#X obj 50 39 declare -path moonlib;
 #X connect 3 0 8 0;
 #X connect 4 0 5 0;
 #X connect 5 0 32 1;

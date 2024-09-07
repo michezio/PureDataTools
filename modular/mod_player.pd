@@ -1,16 +1,11 @@
-#N canvas 716 250 521 474 10;
-#X obj 101 102 cnv 15 48 146 empty empty FILE 3 6 0 5 -233017 -66577
-0;
-#X obj 112 115 bng 25 250 50 0 \$0-open \$0-bar open 3 12 0 7 -99865
--262144 -262144;
-#X obj 112 144 bng 25 250 50 0 \$0-start \$0-bar empty 1 12 0 7 -99865
--262144 -262144;
-#X obj 110 205 mknob 30 100 0.02 2 1 0 \$0-vol \$0-bar empty -2 -6
-0 8 -162280 -66577 -1 7400 1;
-#X obj 112 173 tgl 25 0 \$0-loop \$0-bar empty 17 7 0 10 -99865 -262144
--1 1 1;
-#X obj 101 238 cnv 10 10 10 empty empty L__OUTPUT__R 1 6 0 5 -233017
--66577 0;
+#N canvas 586 16 521 474 10;
+#X declare -path moonlib;
+#X obj 101 102 cnv 15 48 146 empty empty FILE 3 6 0 5 #e0e0e0 #404040 0;
+#X obj 112 115 bng 25 250 50 0 \$0-open \$0-bar open 3 12 0 7 #606060 #fcfcfc #fcfcfc;
+#X obj 112 144 bng 25 250 50 0 \$0-start \$0-bar empty 1 12 0 7 #606060 #fcfcfc #fcfcfc;
+#X obj 110 205 mknob 30 100 0.02 2 1 0 \$0-vol \$0-bar empty -2 -6 0 8 #9c9c9c #404040 #000000 8410 1;
+#X obj 112 173 tgl 25 0 \$0-loop \$0-bar empty 17 7 0 10 #606060 #fcfcfc #000000 0 1;
+#X obj 101 238 cnv 10 10 10 empty empty L__OUTPUT__R 1 6 0 5 #e0e0e0 #404040 0;
 #X msg 167 172 start;
 #X msg 216 176 stop;
 #X obj 199 109 t b b;
@@ -31,10 +26,10 @@
 #X obj 158 113 bang;
 #X msg 176 68 set open \$1 \, 1;
 #X obj 161 143 del 1000;
-#X msg 200 138 open H:/Users/Shin/Music/PDRec/Guitar/ArpeggioBello1.wav
-;
+#X msg 200 138 open H:/Users/Shin/Music/PDRec/Guitar/ArpeggioBello1.wav;
 #X obj 82 34 loadbang;
 #X msg 83 61 1;
+#X obj 36 8 declare -path moonlib;
 #X connect 6 0 20 0;
 #X connect 7 0 20 0;
 #X connect 8 0 6 0;

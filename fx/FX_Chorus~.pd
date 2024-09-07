@@ -1,4 +1,4 @@
-#N canvas 162 205 500 348 12;
+#N canvas -1919 -221 534 395 12;
 #X obj 53 155 * 2;
 #X obj 67 7 inlet rate;
 #X obj 142 7 inlet depth;
@@ -35,7 +35,7 @@
 #X obj 199 268 *~;
 #X obj 349 265 metro;
 #X obj 349 287 outlet bang;
-#X floatatom 406 268 5 0 0 0 - - -;
+#X floatatom 406 268 5 0 0 0 - - - 0;
 #X obj 376 244 expr 1000/$f1;
 #X obj 156 108 * 1.13;
 #X obj 284 108 * 0.91;

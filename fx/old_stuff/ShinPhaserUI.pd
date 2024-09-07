@@ -1,0 +1,51 @@
+#N canvas 0 0 1268 941 10;
+#X obj 405 199 hsl 128 15 0 2 0 0 empty \$0-rate speed -2 -8 0 10 -262144
+-1 -1 2931 1;
+#X floatatom 384 214 5 0 0 0 - - -;
+#X obj 476 264 hsl 128 15 -1 1 0 0 empty empty feedback -2 -8 0 10
+-262144 -1 -1 6350 1;
+#X obj 450 228 hsl 128 15 1 4 0 0 empty \$0-depth depth -2 -8 0 10
+-262144 -1 -1 6513 1;
+#X obj 378 306 spigot~;
+#X obj 461 311 tgl 15 0 empty \$0-bypassk Phaser 17 7 0 10 -4032 -1
+-1 0 1;
+#X obj 378 279 ShinPhaser 1 2;
+#X floatatom 384 243 5 0 0 0 - - -;
+#X floatatom 594 292 5 0 0 0 - #0-feedback -;
+#X obj 378 158 inlet~ phaserIN;
+#X obj 378 336 outlet~ phaserOUT;
+#X obj 90 120 tgl 20 0 \$0-bypassk empty PHASER 25 10 0 10 -4032 -1
+-1 0 1;
+#X obj 26 64 mknob 40 40 1 4 0 1 \$0-depth empty DEPTH 0 -8 0 8 -262144
+-1 -1 2000 1;
+#X obj 134 64 mknob 40 40 0 2 0 1 \$0-rate empty RATE 0 -8 0 8 -262144
+-1 -1 900 1;
+#X obj 85 29 mknob 32 32 0 1 0 1 \$0-feedback empty FEEDBACK -5 -8 0
+8 -262144 -1 -1 0 1;
+#X obj 675 245 sel 0 1;
+#X obj 675 216 tgl 15 0 empty \$0-negative empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 93 69 tgl 15 0 \$0-negative empty +/- 0 25 0 10 -262144 -1 -1
+0 1;
+#X msg 659 284 1;
+#X msg 696 285 -1;
+#X obj 625 314 * 1;
+#X connect 0 0 1 0;
+#X connect 0 0 6 1;
+#X connect 2 0 6 3;
+#X connect 3 0 6 2;
+#X connect 3 0 7 0;
+#X connect 4 1 10 0;
+#X connect 5 0 4 1;
+#X connect 5 0 6 4;
+#X connect 6 0 4 0;
+#X connect 8 0 20 0;
+#X connect 9 0 6 0;
+#X connect 9 0 10 0;
+#X connect 15 0 18 0;
+#X connect 15 1 19 0;
+#X connect 16 0 15 0;
+#X connect 18 0 20 1;
+#X connect 19 0 20 1;
+#X connect 20 0 2 0;
+#X coords 0 -1 1 1 200 150 1 0 0;

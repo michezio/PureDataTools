@@ -1,7 +1,7 @@
-#N canvas 18 43 1216 671 12;
+#N canvas 83 27 1216 671 12;
+#X declare -path moonlib;
 #X obj 466 24 inlet~;
-#X obj 101 101 cnv 15 148 48 empty empty Torpedo 3 7 1 9 -1 -162280
-0;
+#X obj 101 101 cnv 15 148 48 empty empty Torpedo 3 7 1 9 #000000 #9c9c9c 0;
 #N canvas 266 125 407 510 makePreset 0;
 #X obj 37 432 outlet message;
 #X msg 52 93 preset.name;
@@ -40,8 +40,7 @@
 #X connect 6 4 4 0;
 #X connect 6 5 5 0;
 #X restore 63 441 pd loadPreset;
-#X msg 63 489 preset.name 0.949495 1.57576 -4.36364 1512.43 6.28263
-;
+#X msg 63 489 preset.name 0.707 1 -2 1500 6;
 #N canvas 467 50 528 710 presetDispenser 0;
 #X obj 230 647 outlet;
 #X msg 186 333;
@@ -89,25 +88,18 @@
 #X obj 541 578 *~;
 #X obj 540 530 r \$0-byp;
 #X obj 75 313 s \$0-bypR;
-#X obj 235 103 tgl 12 0 \$0-byp \$0-bypR B 3 6 1 10 -258699 -258699
--262144 1 1;
+#X obj 235 103 tgl 12 0 \$0-byp \$0-bypR B 3 6 1 10 #404040 #404040 #a0a0a0 0 1;
 #X obj 235 228 sel 0 1;
 #X obj 235 188 r \$0-byp;
 #X obj 225 332 s \$0-bypR;
-#X obj 166 105 hradio 8 1 0 8 \$0-preset \$0-presetR empty 0 -8 0 10
--66577 -162280 -1 2;
+#X obj 166 105 hradio 8 1 0 8 \$0-preset \$0-presetR empty 0 -8 0 10 #404040 #9c9c9c #000000 0;
 #X msg 225 265 color 2 2 1;
 #X msg 267 298 color 13 13 0;
-#X obj 107 118 mknob 18 100 0.5 1 0 0 \$0-depth \$0-depthR DEPTH -1
-24 1 7 -66577 -162280 -191407 8900 1;
-#X obj 138 118 mknob 18 100 0.5 2 0 0 \$0-width \$0-widthR WIDTH -1
-24 1 7 -66577 -162280 -191407 7100 1;
-#X obj 167 118 mknob 18 100 0 -6 0 0 \$0-scoop \$0-scoopR SCOOP -1
-24 1 7 -66577 -162280 -191407 7200 1;
-#X obj 196 118 mknob 18 100 1000 2500 1 0 \$0-reso \$0-resoR RESO 0
-24 1 7 -66577 -162280 -191407 4470 1;
-#X obj 224 118 mknob 18 100 -2 12 0 0 \$0-enph \$0-enphR ENPH 0 24
-1 7 -66577 -162280 -191407 5857 1;
+#X obj 107 118 mknob 18 100 0.5 1 0 0 \$0-depth \$0-depthR DEPTH -1 24 1 7 #404040 #9c9c9c #b8b8b8 4099 1;
+#X obj 138 118 mknob 18 100 0.5 2 0 0 \$0-width \$0-widthR WIDTH -1 24 1 7 #404040 #9c9c9c #b8b8b8 3300 1;
+#X obj 167 118 mknob 18 100 0 -6 0 0 \$0-scoop \$0-scoopR SCOOP -1 24 1 7 #404040 #9c9c9c #b8b8b8 3300 1;
+#X obj 196 118 mknob 18 100 1000 2500 1 0 \$0-reso \$0-resoR RESO 0 24 1 7 #404040 #9c9c9c #b8b8b8 4381 1;
+#X obj 224 118 mknob 18 100 -2 12 0 0 \$0-enph \$0-enphR ENPH 0 24 1 7 #404040 #9c9c9c #b8b8b8 5657 1;
 #X obj 718 288 * -1.5;
 #X obj 549 59 r \$0-depth;
 #X msg 549 87 \$1 50;
@@ -127,12 +119,12 @@
 #X obj 759 265 max 0;
 #X obj 615 337 * 2;
 #X obj 612 386 * 4;
-#X obj 552 242 biquad_peak~ 400;
-#X obj 553 311 biquad_peak~ 1500 0.2;
-#X obj 552 364 biquad_peak~ 3700 1.5;
-#X obj 551 413 biquad_hish~ 6000 -10;
-#X obj 551 438 biquad_hish~ 6000 -10;
-#X obj 552 193 biquad_hpf~ 100 0.707;
+#X obj 552 242 bq_peak~ 400;
+#X obj 553 311 bq_peak~ 1500 0.2;
+#X obj 552 364 bq_peak~ 3700 1.5;
+#X obj 551 413 bq_highshelving~ 6000 -10;
+#X obj 551 438 bq_highshelving~ 6000 -10;
+#X obj 552 193 bq_highpass~ 100 0.707;
 #X msg 756 193 1.98614 -0.986309 0.993112 -1.98622 0.993112;
 #X msg 709 242 1.923 -0.92564 0.985317 -1.923 0.940323;
 #X msg 760 312 1.91567 -0.953839 0.984719 -1.91567 0.96912;
@@ -140,7 +132,8 @@
 #X msg 760 414 1.16987 -0.424847 0.430591 -0.28277 0.107159;
 #X msg 755 443 1.16987 -0.424847 0.430591 -0.28277 0.107159;
 #X msg 722 479 -0.462936 -0.209715 0.418163 0.836326 0.418163;
-#X obj 553 477 biquad_lpf~ 15000;
+#X obj 553 477 bq_lowpass~ 15000;
+#X obj 56 39 declare -path moonlib;
 #X connect 0 0 11 0;
 #X connect 0 0 52 0;
 #X connect 2 0 4 0;

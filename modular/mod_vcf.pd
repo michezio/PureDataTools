@@ -1,8 +1,7 @@
-#N canvas 231 297 777 531 10;
-#X obj 101 102 cnv 15 48 146 empty empty IN_____FREQ 3 6 0 5 -233017
--66577 0;
-#X obj 101 238 cnv 10 48 10 empty empty OUTPUT 3 6 0 5 -233017 -66577
-0;
+#N canvas 277 87 777 531 10;
+#X declare -path moonlib;
+#X obj 101 102 cnv 15 48 146 empty empty IN_____FREQ 3 6 0 5 #e0e0e0 #404040 0;
+#X obj 101 238 cnv 10 48 10 empty empty OUTPUT 3 6 0 5 #e0e0e0 #404040 0;
 #X obj 286 66 inlet~;
 #X obj 350 66 inlet~;
 #X obj 351 169 *~;
@@ -12,18 +11,14 @@
 #X obj 310 405 outlet~;
 #X msg 370 126 \$1 50;
 #X obj 370 147 line~;
-#X obj 111 119 mknob 30 100 20 10000 1 0 \$0-cutoff \$0-bar empty -2
--6 0 8 -99865 -262144 -1 9900 1;
-#X obj 111 153 mknob 30 100 1.4 20 1 0 \$0-reso \$0-bar empty -2 -6
-0 8 -99865 -262144 -1 800 1;
+#X obj 111 119 mknob 30 100 20 10000 1 0 \$0-cutoff \$0-bar empty -2 -6 0 8 #606060 #fcfcfc #000000 0 1;
+#X obj 111 153 mknob 30 100 1.4 20 1 0 \$0-reso \$0-bar empty -2 -6 0 8 #606060 #fcfcfc #000000 0 1;
 #X msg 401 290 \$1 50;
 #X obj 401 271 r \$0-reso;
 #X obj 370 107 r \$0-mod;
 #X obj 299 208 r \$0-cutoff;
-#X obj 116 188 mknob 20 100 0 1 0 0 \$0-mod \$0-bar empty -2 -6 0 8
--191407 -66577 -1 0 1;
-#X obj 116 211 mknob 20 100 1 10 1 0 \$0-sat \$0-bar empty -2 -6 0
-8 -191407 -66577 -1 9900 1;
+#X obj 116 188 mknob 20 100 0 1 0 0 \$0-mod \$0-bar empty -2 -6 0 8 #b8b8b8 #404040 #000000 0 1;
+#X obj 116 211 mknob 20 100 1 10 1 0 \$0-sat \$0-bar empty -2 -6 0 8 #b8b8b8 #404040 #000000 0 1;
 #X obj 299 298 max~ 10;
 #X obj 286 339 vcf~;
 #X obj 401 311 line;
@@ -31,6 +26,7 @@
 #X msg 400 352 \$1 50;
 #X obj 400 333 r \$0-sat;
 #X obj 400 373 line~;
+#X obj 77 48 declare -path moonlib;
 #X connect 2 0 20 0;
 #X connect 3 0 4 0;
 #X connect 4 0 5 1;

@@ -1,10 +1,7 @@
-#N canvas 363 289 777 531 10;
-#X obj 101 102 cnv 15 48 146 empty empty TRIGGER 3 6 0 5 -233017 -66577
-0;
-#X obj 101 238 cnv 10 48 10 empty empty ADSR____END 2 6 0 5 -233017
--66577 0;
-#X obj 104 115 vsl 8 90 1 1000 1 0 \$0-attack \$0-bar A 2 98 1 8 -128992
--262144 -1 0 1;
+#N canvas 301 72 777 531 10;
+#X obj 101 102 cnv 15 48 146 empty empty TRIGGER 3 6 0 5 #e0e0e0 #404040 0;
+#X obj 101 238 cnv 10 48 10 empty empty ADSR____END 2 6 0 5 #e0e0e0 #404040 0;
+#X obj 104 115 vsl 8 90 1 1000 1 0 \$0-attack \$0-bar A 2 98 1 8 #7c7c7c #fcfcfc #000000 0 1;
 #X obj 234 16 inlet;
 #X obj 366 387 vline~;
 #X obj 296 138 sel 1 0;
@@ -32,16 +29,11 @@
 #X obj 491 214 r \$0-decay;
 #X obj 460 183 r \$0-attack;
 #X obj 491 234 f;
-#X obj 105 218 mknob 20 100 10 10000 1 0 \$0-maxsus empty empty -2
--6 0 8 -66577 -262144 -1 0 1;
-#X obj 128 221 tgl 15 0 \$0-maxer \$0-bar empty 17 7 0 10 -66577 -262144
--1 0 1;
-#X obj 115 115 vsl 8 90 1 1000 1 0 \$0-decay \$0-bar D 2 98 1 8 -128992
--262144 -1 0 1;
-#X obj 126 115 vsl 8 90 0.01 1 1 0 \$0-sustain \$0-bar S 2 98 1 8 -128992
--262144 -1 0 1;
-#X obj 137 115 vsl 8 90 10 10000 1 0 \$0-release \$0-bar R 2 98 1 8
--128992 -262144 -1 0 1;
+#X obj 105 218 mknob 20 100 10 10000 1 0 \$0-maxsus empty empty -2 -6 0 8 -66577 -262144 -1 0 1;
+#X obj 128 221 tgl 15 0 \$0-maxer \$0-bar empty 17 7 0 10 #404040 #fcfcfc #000000 0 1;
+#X obj 115 115 vsl 8 90 1 1000 1 0 \$0-decay \$0-bar D 2 98 1 8 #7c7c7c #fcfcfc #000000 0 1;
+#X obj 126 115 vsl 8 90 0.01 1 1 0 \$0-sustain \$0-bar S 2 98 1 8 #7c7c7c #fcfcfc #000000 0 1;
+#X obj 137 115 vsl 8 90 10 10000 1 0 \$0-release \$0-bar R 2 98 1 8 #7c7c7c #fcfcfc #000000 0 1;
 #X obj 206 415 spigot;
 #X obj 258 384 r \$0-maxer;
 #X obj 296 84 spigot;

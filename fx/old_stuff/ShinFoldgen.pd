@@ -1,0 +1,26 @@
+#N canvas 0 94 1280 930 10;
+#X obj 376 160 *~ -1;
+#X obj 242 187 +~;
+#X obj 461 102 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 243 221 clip~ -1 1;
+#X obj 243 285 outlet~ AUDIO OUT;
+#X obj 55 41 inlet~ AUDIO DIRECT;
+#X obj 189 108 hsl 128 15 0 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 104 137 *~ 1;
+#X obj 376 131 *~ 1;
+#X obj 185 41 inlet DIRECT LEVEL;
+#X obj 316 42 inlet~ AUDIO FOLDBACK;
+#X obj 461 42 inlet FOLDBACK LEVEL;
+#X connect 0 0 1 1;
+#X connect 1 0 3 0;
+#X connect 2 0 8 1;
+#X connect 3 0 4 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 7 0 1 0;
+#X connect 8 0 0 0;
+#X connect 9 0 7 1;
+#X connect 10 0 8 0;
+#X connect 11 0 8 1;

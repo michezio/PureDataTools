@@ -1,0 +1,41 @@
+#N canvas 0 0 1268 941 10;
+#X obj 362 291 ShinQuack;
+#X obj 332 144 spigot~;
+#X obj 487 237 tgl 15 1 empty \$0-bypassk Envelope 17 7 0 10 -159808
+-1 -1 0 1;
+#X obj 433 98 mknob 32 32 1 10 1 0 empty \$0-sense Sense 0 -8 0 8 -262144
+-1 -1 1590 1;
+#X obj 473 97 mknob 32 32 0 20 0 0 empty \$0-q Q 0 -8 0 8 -262144 -1
+-1 477 1;
+#X obj 449 166 tgl 15 1 empty \$0-hi HiPass 17 7 0 10 -262144 -1 -1
+1 1;
+#X obj 88 122 tgl 20 0 \$0-bypassk empty ENVELOPE 25 10 0 10 -159808
+-1 -1 0 1;
+#X obj 17 61 mknob 40 40 1 10 1 1 \$0-sense empty SENSE 0 -8 0 8 -262144
+-1 -1 2000 1;
+#X obj 72 32 mknob 40 40 0 20 0 1 \$0-q empty Q 0 -8 0 8 -262144 -1
+-1 600 1;
+#X obj 132 27 tgl 15 0 \$0-hi empty HI-PASS 0 -7 0 10 -262144 -1 -1
+0 1;
+#X obj 162 48 mknob 20 20 0.01 0.1 1 1 \$0-notch empty NOTCH 0 -8 0
+8 -262144 -1 -1 0 1;
+#X obj 131 81 mknob 20 20 0.01 0.1 1 1 \$0-manual empty MANUAL 0 -8
+0 8 -262144 -1 -1 0 1;
+#X obj 531 98 mknob 32 32 0.01 0.1 1 0 empty \$0-manual manual 0 -8
+0 8 -262144 -1 -1 0 1;
+#X obj 581 100 mknob 32 32 0.01 0.1 1 0 empty \$0-notch NOTCH 0 -8 0
+8 -262144 -1 -1 0 1;
+#X obj 333 113 inlet~ quackIN;
+#X obj 332 354 outlet~ quackOUT;
+#X connect 0 0 15 0;
+#X connect 1 0 15 0;
+#X connect 1 1 0 0;
+#X connect 2 0 1 1;
+#X connect 2 0 0 6;
+#X connect 3 0 0 1;
+#X connect 4 0 0 2;
+#X connect 5 0 0 3;
+#X connect 12 0 0 4;
+#X connect 13 0 0 5;
+#X connect 14 0 1 0;
+#X coords 0 -1 1 1 200 150 1 0 0;

@@ -1,0 +1,47 @@
+#N canvas 747 240 575 420 10;
+#X floatatom 256 140 7 0 0 0 - - -;
+#X obj 111 185 lop~ 2000;
+#X obj 214 170 hsl 128 15 0 20000 0 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 782 1;
+#X floatatom 226 185 5 0 0 0 - - -;
+#X obj 112 101 *~;
+#X obj 159 104 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 9012 1;
+#X obj 112 228 hip~ 50;
+#X obj 214 213 hsl 128 15 0 2000 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 156 1;
+#X floatatom 228 228 5 0 0 0 - - -;
+#X text 293 99 feedback;
+#X text 280 183 lo-pass;
+#X text 284 229 hi-pass;
+#X obj 246 125 hsl 128 15 40 4000 1 0 empty empty empty -2 -8 0 10
+-262144 -1 -1 4956 1;
+#X text 332 139 time;
+#X obj 22 28 inlet~ audioIN;
+#X obj 208 29 inlet feedback;
+#X obj 317 30 inlet time;
+#X obj 112 345 outlet~ audioOUT;
+#X obj 112 72 r~ \$0-delayBACK;
+#X obj 113 263 s~ \$0-delayBACK;
+#X obj 111 293 r~ \$0-delayBACK;
+#X obj 465 30 inlet high;
+#X obj 395 30 inlet low;
+#X obj 112 140 delay_ms~ 4000;
+#X connect 1 0 6 0;
+#X connect 2 0 1 1;
+#X connect 2 0 3 0;
+#X connect 4 0 23 0;
+#X connect 5 0 4 1;
+#X connect 6 0 19 0;
+#X connect 7 0 8 0;
+#X connect 7 0 6 1;
+#X connect 12 0 0 0;
+#X connect 12 0 23 1;
+#X connect 14 0 23 0;
+#X connect 15 0 5 0;
+#X connect 16 0 12 0;
+#X connect 18 0 4 0;
+#X connect 20 0 17 0;
+#X connect 21 0 2 0;
+#X connect 22 0 7 0;
+#X connect 23 0 1 0;

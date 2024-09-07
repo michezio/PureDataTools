@@ -1,0 +1,38 @@
+#N canvas 0 94 1276 930 10;
+#X obj 149 93 hsl 128 15 1 100 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X floatatom 255 186 7 -5 0 0 - - -;
+#X floatatom 255 225 7 0 5 0 - - -;
+#X obj 251 171 hsl 80 15 0 -2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 251 210 hsl 80 15 0 2 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 98 199 clip~ -0.7 0.7;
+#X obj 105 108 *~ 10;
+#X text 161 71 preamp;
+#X obj 99 25 inlet~ audioIN;
+#X obj 251 25 inlet gain;
+#X obj 88 284 outlet~ audioOUT;
+#X obj 367 28 inlet bias;
+#X obj 183 139 hsl 80 15 -10 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 0 1;
+#X obj 134 153 +~ 0;
+#X floatatom 190 154 5 0 0 0 - - -;
+#X text 271 134 bias;
+#X msg 83 146 0;
+#X obj 94 247 hip~ 5;
+#X connect 0 0 6 1;
+#X connect 3 0 1 0;
+#X connect 3 0 5 1;
+#X connect 4 0 2 0;
+#X connect 4 0 5 2;
+#X connect 5 0 17 0;
+#X connect 6 0 13 0;
+#X connect 8 0 6 0;
+#X connect 9 0 6 1;
+#X connect 11 0 12 0;
+#X connect 12 0 13 1;
+#X connect 12 0 14 0;
+#X connect 13 0 5 0;
+#X connect 16 0 12 0;
+#X connect 17 0 10 0;

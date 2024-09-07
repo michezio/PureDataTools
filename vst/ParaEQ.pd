@@ -1,17 +1,15 @@
 #N canvas 148 64 765 611 10;
+#X declare -path moonlib;
 #X obj 444 43 inlet~;
 #X obj 445 581 outlet~;
-#X obj 101 101 cnv 15 148 98 empty empty Para:EQ 3 7 1 9 -1 -162280
-0;
-#X obj 167 105 hradio 8 1 0 8 \$0-preset \$0-presetR empty 0 -8 0 10
--66577 -162280 -1 0;
+#X obj 101 101 cnv 15 148 98 empty empty Para:EQ 3 7 1 9 #000000 #9c9c9c 0;
+#X obj 167 105 hradio 8 1 0 8 \$0-preset \$0-presetR empty 0 -8 0 10 #404040 #9c9c9c #000000 0;
 #N canvas 100 62 450 300 byp 0;
 #X obj 244 107 sel 0 1;
 #X msg 244 152 color \$1 \$2 \$3;
 #X obj 243 86 r \$0-byp;
 #X obj 244 174 s \$0-bypR;
-#X obj 100 100 tgl 12 0 \$0-byp \$0-bypR B 3 6 1 10 -66577 -66577 -166441
-0 1;
+#X obj 100 100 tgl 12 0 \$0-byp \$0-bypR B 3 6 1 10 #404040 #404040 #a0a0a0 0 1;
 #X obj 100 67 inlet;
 #X obj 99 150 outlet;
 #X msg 244 129 2 2 1;
@@ -53,8 +51,7 @@
 #X obj 34 492 pack s f f f f f f f f f f f f f;
 #X obj 278 395 r \$0-higain;
 #X obj 292 418 r \$0-hifreq;
-#X msg 34 525 set \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10 \$11 \$12
-\$13 \$14;
+#X msg 34 525 set \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10 \$11 \$12 \$13 \$14;
 #X connect 1 0 15 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
@@ -105,8 +102,7 @@
 #X connect 12 12 13 0;
 #X connect 12 13 14 0;
 #X restore 107 437 pd loadPreset;
-#X msg 107 485 preset.name 0 100 0 1 300.031 0 1 1500.17 0 1 3000.21
-0 5000.92, f 22;
+#X msg 107 485 preset.name 0 100 0 1 300 0 1 1500 0 1 3000 0 5001, f 22;
 #N canvas 568 12 534 710 presetDispenser 0;
 #X obj 230 647 outlet;
 #X msg 286 185;
@@ -120,8 +116,7 @@
 #X msg 159 331;
 #X msg 126 376;
 #X msg 29 458 INIT 0 100 0 1 300 0 1 1500 0 1 3000 0 5001;
-#X msg 80 416 METAL 4.36364 100 0 1 300.031 -12 1 800.598 0 1 3000.21
-4.12121 4517.05;
+#X msg 80 416 METAL 4.36364 100 0 1 300.031 -12 1 800.598 0 1 3000.21 4.12121 4517.05;
 #X connect 1 0 0 0;
 #X connect 2 0 0 0;
 #X connect 3 0 0 0;
@@ -149,44 +144,26 @@
 #X obj 107 334 s \$0-presetR;
 #X msg 107 279 0;
 #X obj 119 309 s \$0-bypR;
-#X obj 504 169 biquad_losh~ 100 0, f 20;
-#X obj 504 530 biquad_hish~ 10000 0;
-#X obj 110 120 mknob 18 100 -12 12 0 0 \$0-logain \$0-logainR empty
-3 24 1 7 -66577 -162280 -191407 4950 1;
-#X obj 110 160 mknob 18 100 20 200 0 0 \$0-lofreq \$0-lofreqR empty
-3 24 1 7 -66577 -162280 -191407 4400 1;
-#X obj 138 140 mknob 18 100 0.2 2 0 0 \$0-bw1 \$0-bw1R empty 3 24 1
-7 -66577 -162280 -191407 4400 1;
-#X obj 138 160 mknob 18 100 100 999 1 0 \$0-freq1 \$0-freq1R empty
-3 24 1 7 -66577 -162280 -191407 4726 1;
-#X obj 166 140 mknob 18 100 0.2 2 0 0 \$0-bw2 \$0-bw2R empty 3 24 1
-7 -66577 -162280 -191407 4400 1;
-#X obj 166 160 mknob 18 100 500 5000 1 0 \$0-freq2 \$0-freq2R empty
-3 24 1 7 -66577 -162280 -191407 4724 1;
-#X obj 194 140 mknob 18 100 0.2 2 0 0 \$0-bw3 \$0-bw3R empty 3 24 1
-7 -66577 -162280 -191407 4400 1;
-#X obj 194 160 mknob 18 100 1000 9999 1 0 \$0-freq3 \$0-freq3R empty
-3 24 1 7 -66577 -162280 -191407 4724 1;
-#X obj 223 160 mknob 18 100 2000 15000 1 0 \$0-hifreq \$0-hifreqR empty
-3 24 1 7 -66577 -162280 -191407 4503 1;
-#X obj 141 183 cnv 10 10 10 empty \$0-freq1S 300 0 5 1 8 -1 -162280
-0;
-#X obj 168 183 cnv 10 10 10 empty \$0-freq2S 1500 0 5 1 8 -1 -162280
-0;
-#X obj 195 183 cnv 10 10 10 empty \$0-freq3S 3000 0 5 1 8 -1 -162280
-0;
-#X obj 113 183 cnv 10 10 10 empty \$0-lofreqS 100 0 5 1 8 -1 -162280
-0;
-#X obj 224 183 cnv 10 10 10 empty \$0-hifreqS 5000 0 5 1 8 -1 -162280
-0;
-#X obj 138 120 mknob 18 100 -12 12 0 0 \$0-gain1 \$0-gain1R empty 3
-24 1 7 -66577 -162280 -191407 4950 1;
-#X obj 166 120 mknob 18 100 -12 12 0 0 \$0-gain2 \$0-gain2R empty 3
-24 1 7 -66577 -162280 -191407 4950 1;
-#X obj 194 120 mknob 18 100 -12 12 0 0 \$0-gain3 \$0-gain3R empty 3
-24 1 7 -66577 -162280 -191407 4950 1;
-#X obj 223 120 mknob 18 100 -12 12 0 0 \$0-higain \$0-higainR empty
-3 24 1 7 -66577 -162280 -191407 4950 1;
+#X obj 504 169 bq_lowshelving~ 100 0, f 20;
+#X obj 504 530 bq_highshelving~ 10000 0;
+#X obj 110 120 mknob 18 100 -12 12 0 0 \$0-logain \$0-logainR empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4950 1;
+#X obj 110 160 mknob 18 100 20 200 0 0 \$0-lofreq \$0-lofreqR empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4400 1;
+#X obj 138 140 mknob 18 100 0.2 2 0 0 \$0-bw1 \$0-bw1R empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4400 1;
+#X obj 138 160 mknob 18 100 100 999 1 0 \$0-freq1 \$0-freq1R empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4726 1;
+#X obj 166 140 mknob 18 100 0.2 2 0 0 \$0-bw2 \$0-bw2R empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4400 1;
+#X obj 166 160 mknob 18 100 500 5000 1 0 \$0-freq2 \$0-freq2R empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4724 1;
+#X obj 194 140 mknob 18 100 0.2 2 0 0 \$0-bw3 \$0-bw3R empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4400 1;
+#X obj 194 160 mknob 18 100 1000 9999 1 0 \$0-freq3 \$0-freq3R empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4724 1;
+#X obj 223 160 mknob 18 100 2000 15000 1 0 \$0-hifreq \$0-hifreqR empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4503 1;
+#X obj 141 183 cnv 10 10 10 empty \$0-freq1S 300 0 5 1 8 #000000 #9c9c9c 0;
+#X obj 168 183 cnv 10 10 10 empty \$0-freq2S 1500 0 5 1 8 #000000 #9c9c9c 0;
+#X obj 195 183 cnv 10 10 10 empty \$0-freq3S 3000 0 5 1 8 #000000 #9c9c9c 0;
+#X obj 113 183 cnv 10 10 10 empty \$0-lofreqS 100 0 5 1 8 #000000 #9c9c9c 0;
+#X obj 224 183 cnv 10 10 10 empty \$0-hifreqS 5001 0 5 1 8 #000000 #9c9c9c 0;
+#X obj 138 120 mknob 18 100 -12 12 0 0 \$0-gain1 \$0-gain1R empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4950 1;
+#X obj 166 120 mknob 18 100 -12 12 0 0 \$0-gain2 \$0-gain2R empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4950 1;
+#X obj 194 120 mknob 18 100 -12 12 0 0 \$0-gain3 \$0-gain3R empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4950 1;
+#X obj 223 120 mknob 18 100 -12 12 0 0 \$0-higain \$0-higainR empty 3 24 1 7 #404040 #9c9c9c #b8b8b8 4950 1;
 #N canvas 387 229 450 300 line 0;
 #X obj 150 127 line;
 #X obj 150 77 inlet;
@@ -301,9 +278,9 @@
 #X obj 550 378 r \$0-freq3;
 #X obj 594 397 r \$0-bw3;
 #X obj 638 416 r \$0-gain3;
-#X obj 505 264 biquad_peak~ 300 1 0;
-#X obj 505 359 biquad_peak~ 2000 1 0;
-#X obj 505 454 biquad_peak~ 3000 1 0;
+#X obj 505 264 bq_peak~ 300 1 0;
+#X obj 505 359 bq_peak~ 2000 1 0;
+#X obj 505 454 bq_peak~ 3000 1 0;
 #N canvas 458 195 786 300 LABELER 0;
 #X obj 94 196 s \$0-lofreqS;
 #X obj 94 148 makefilename %d;
@@ -351,7 +328,8 @@
 #X connect 22 0 20 0;
 #X connect 23 0 22 0;
 #X restore 312 320 pd LABELER;
-#X floatatom 667 156 5 0 0 0 - - -, f 5;
+#X floatatom 667 156 5 0 0 0 - - - 0;
+#X obj 43 20 declare -path moonlib;
 #X connect 0 0 5 0;
 #X connect 0 0 6 0;
 #X connect 5 0 22 0;

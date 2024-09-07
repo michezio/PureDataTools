@@ -1,4 +1,4 @@
-#N canvas 266 331 600 397 12;
+#N canvas 349 191 600 397 12;
 #X obj 34 33 inlet;
 #X obj 82 33 inlet;
 #X obj 132 32 inlet;
@@ -13,19 +13,13 @@
 #X obj 313 59 * -256;
 #X obj 379 59 * -1;
 #X obj 313 226 - 1;
-#X obj 313 348 outlet;
-#X obj 101 101 cnv 15 78 47 \$0-foo \$0-bar empty 20 12 0 14 -66577
--66577 0;
-#X obj 103 105 vsl 8 38 0 255 0 0 \$0-foo \$0-bar empty 1 -9 0 10 -258049
--262144 -262144 0 1;
-#X obj 113 105 vsl 8 38 0 255 0 0 \$0-foo \$0-bar empty 1 -9 0 10 -4033
--262144 -262144 0 1;
-#X obj 123 105 vsl 8 38 0 255 0 0 \$0-foo \$0-bar empty 1 -9 0 10 -64
--262144 -262144 0 1;
-#X obj 134 103 cnv 15 43 43 empty empty empty 20 12 0 14 -1 -66577
-0;
-#X obj 136 105 cnv 15 39 39 empty \$0-show empty 20 12 0 14 -128279
--66577 0;
+#X obj 201 334 outlet;
+#X obj 101 101 cnv 15 78 47 \$0-foo \$0-bar empty 20 12 0 14 #404040 #404040 0;
+#X obj 103 105 vsl 8 38 0 255 0 0 \$0-foo \$0-bar empty 1 -9 0 10 #fc0000 #fcfcfc #fcfcfc 0 1;
+#X obj 113 105 vsl 8 38 0 255 0 0 \$0-foo \$0-bar empty 1 -9 0 10 #00fc00 #fcfcfc #fcfcfc 0 1;
+#X obj 123 105 vsl 8 38 0 255 0 0 \$0-foo \$0-bar empty 1 -9 0 10 #0000fc #fcfcfc #fcfcfc 0 1;
+#X obj 134 103 cnv 15 43 43 empty empty empty 20 12 0 14 #000000 #404040 0;
+#X obj 136 105 cnv 15 39 39 empty \$0-show empty 20 12 0 14 #7f7f7f #404040 0;
 #X obj 433 223 f \$0;
 #X obj 404 253 pack;
 #X obj 433 197 loadbang;
@@ -35,6 +29,10 @@
 #X obj 379 32 i;
 #X obj 189 7 loadbang;
 #X msg 189 38 127;
+#X obj 136 242 pack f f f;
+#X obj 339 335 outlet;
+#X text 173 361 Pd color value;
+#X text 344 363 RGB values;
 #X connect 0 0 16 0;
 #X connect 1 0 17 0;
 #X connect 2 0 18 0;
@@ -50,8 +48,11 @@
 #X connect 13 0 14 0;
 #X connect 13 0 22 0;
 #X connect 16 0 25 0;
+#X connect 16 0 30 0;
 #X connect 17 0 26 0;
+#X connect 17 0 30 1;
 #X connect 18 0 27 0;
+#X connect 18 0 30 2;
 #X connect 21 0 22 1;
 #X connect 22 0 24 0;
 #X connect 23 0 21 0;
@@ -62,4 +63,5 @@
 #X connect 29 0 16 0;
 #X connect 29 0 17 0;
 #X connect 29 0 18 0;
+#X connect 30 0 31 0;
 #X coords 0 -1 1 1 80 49 2 100 100;

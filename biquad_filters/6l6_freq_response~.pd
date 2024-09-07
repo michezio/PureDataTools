@@ -1,7 +1,7 @@
 #N canvas 0 50 450 300 10;
-#X obj 61 134 biquad_peak~ 10000 4 -6;
-#X obj 61 80 biquad_losh~ 100 -12 0.3;
-#X obj 61 107 biquad_hpf~ 20;
+#X obj 61 134 bq_peak~ 10000 4 -6;
+#X obj 61 80 bq_lowshelving~ 100 -12 0.3;
+#X obj 61 107 bq_highpass~ 20;
 #X obj 59 32 inlet~;
 #X obj 55 198 outlet~;
 #X connect 0 0 4 0;
