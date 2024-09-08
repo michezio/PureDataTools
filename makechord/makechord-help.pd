@@ -2,7 +2,7 @@
 #X msg 65 176 velocity 100;
 #X msg 89 197 duration 1000;
 #X msg 114 219 transpose -2;
-#N canvas 603 199 386 465 preset_mode 1;
+#N canvas 603 199 386 465 preset_mode 0;
 #N canvas 651 50 466 489 chords_list 0;
 #X text 24 18 maj - major \; min - minor \; dim - diminished \; aug - augmented \; maj7 - major 7M \; min7 - minor 7m \; dom7 - major 7m (dominant 7) \; dim7 - diminished (flat 7m) \; maj3 - major (no5) \; min3 - minor (no5) \; pow - power chord (no3) \; tri - tritone (flat 5 no3) \;, f 30;
 #X text 27 199 majfl5 - major (flat 5) \; minsh5 - minor (sharp 5) \; sus2 - suspended 2M (no3) \; sus4 - suspended 4 (no3) \; sus24 - suspended 2M and 4 (no3) \; minmaj7 - minor 7M \; sus7 - suspended 4 7m \; min7fl5 - minor 7m (flat 5) (half-diminished) \; aug7 - augmented 7m \; maj6 - major 6M \; min6 - minor 6M \;;
