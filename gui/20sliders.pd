@@ -1,48 +1,28 @@
 #N canvas 283 3 753 705 10;
-#X obj 101 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 111 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 121 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 131 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 141 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 151 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 161 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 171 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 181 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 191 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 54 17 inlet;
+#X obj 101 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 111 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 121 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 131 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 141 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 151 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 161 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 171 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 181 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 191 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 53 4 inlet;
 #X msg 1 197 0;
 #X obj 58 626 route 0;
 #X obj 58 654 outlet;
-#X obj 201 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 211 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 221 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 231 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 241 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 251 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 261 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 271 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 281 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 291 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
+#X obj 201 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 211 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 221 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 231 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 241 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 251 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 261 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 271 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 281 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 291 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
 #X msg 408 189 0;
 #X obj 58 595 pack f f f f f f f f f f f f f f f f f f f f f;
 #X obj 54 41 unpack f f f f f f f f f f f f f f f f f f f f;
@@ -66,6 +46,7 @@
 #X obj 369 502 expr (\$2-\$1)*$f1+\$1;
 #X obj 387 521 expr (\$2-\$1)*$f1+\$1;
 #X obj 405 540 expr (\$2-\$1)*$f1+\$1;
+#X obj 7 23 t b list;
 #X connect 0 0 11 0;
 #X connect 0 0 27 0;
 #X connect 1 0 11 0;
@@ -86,7 +67,7 @@
 #X connect 8 0 35 0;
 #X connect 9 0 11 0;
 #X connect 9 0 36 0;
-#X connect 10 0 26 0;
+#X connect 10 0 47 0;
 #X connect 11 0 25 0;
 #X connect 12 0 13 0;
 #X connect 14 0 24 0;
@@ -151,4 +132,6 @@
 #X connect 44 0 25 18;
 #X connect 45 0 25 19;
 #X connect 46 0 25 20;
+#X connect 47 0 11 0;
+#X connect 47 1 26 0;
 #X coords 0 -1 1 1 200 57 2 100 100;

@@ -1,25 +1,15 @@
 #N canvas 314 128 557 512 10;
-#X obj 101 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 111 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 121 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 131 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 141 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 151 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 161 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 171 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 181 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 191 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 -262144
--1 -1 0 1;
-#X obj 86 9 inlet;
+#X obj 101 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 111 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 121 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 131 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 141 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 151 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 161 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 171 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 181 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 191 103 vsl 8 50 0 1 0 0 \$0-foo \$0-bar empty 0 -9 0 10 #fcfcfc #000000 #000000 0 1;
+#X obj 58 5 inlet;
 #X obj 83 42 unpack f f f f f f f f f f;
 #X obj 45 384 pack f f f f f f f f f f f;
 #X msg 17 341 0;
@@ -35,6 +25,7 @@
 #X obj 188 312 expr (\$2-\$1)*$f1+\$1;
 #X obj 206 331 expr (\$2-\$1)*$f1+\$1;
 #X obj 224 350 expr (\$2-\$1)*$f1+\$1;
+#X obj 20 27 t b list;
 #X connect 0 0 13 0;
 #X connect 0 0 16 0;
 #X connect 1 0 13 0;
@@ -55,7 +46,7 @@
 #X connect 8 0 24 0;
 #X connect 9 0 13 0;
 #X connect 9 0 25 0;
-#X connect 10 0 11 0;
+#X connect 10 0 26 0;
 #X connect 11 0 0 0;
 #X connect 11 1 1 0;
 #X connect 11 2 2 0;
@@ -79,4 +70,6 @@
 #X connect 23 0 12 8;
 #X connect 24 0 12 9;
 #X connect 25 0 12 10;
+#X connect 26 0 13 0;
+#X connect 26 1 11 0;
 #X coords 0 -1 1 1 100 57 2 100 100;
