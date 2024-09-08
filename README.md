@@ -18,7 +18,7 @@ Most of the abstractions don't have dependencies, except for some of the GUI one
 
 `biquad_filters`: Filters automating the creation of coefficients for the biquad filter.
 
-`color_tool`: simple utility to calculate Pd color value from standard RGB values
+`color_tools`: simple utilities to calculate or show Pd color value from standard RGB values.
 
 `frequency_response`: shows the amplitude frequency response plot of a filter.
 

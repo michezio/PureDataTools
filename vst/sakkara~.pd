@@ -1,5 +1,5 @@
-#N canvas 705 50 554 610 10;
-#N canvas 497 255 450 315 osc 0;
+#N canvas -1144 -681 1135 1388 10;
+#N canvas 105 196 450 315 osc 0;
 #X obj 10 12 block~ 64 1 8;
 #X obj 166 11 inlet;
 #X obj 129 59 route 1 2 3 4 5 6 7 8;
@@ -149,8 +149,8 @@
 #X connect 9 0 10 0;
 #X connect 10 0 7 1;
 #X restore 151 228 pd modulator2;
-#N canvas 445 239 450 300 modulator1 0;
-#N canvas 0 50 450 300 osc 0;
+#N canvas 413 230 450 300 modulator1 0;
+#N canvas 156 156 450 300 osc 0;
 #X obj 327 37 switch~;
 #X obj 327 11 inlet;
 #X obj 105 45 inlet~;
@@ -189,19 +189,17 @@
 #X obj 212 200 r \$0-amp1;
 #X obj 160 117 == 0;
 #X obj 243 117 == 1;
-#X obj 292 189 miniscope;
 #X obj 154 222 *~;
-#X connect 0 0 9 0;
-#X connect 1 0 9 0;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
 #X connect 2 0 6 0;
 #X connect 2 0 7 0;
 #X connect 3 0 0 0;
 #X connect 3 0 1 0;
-#X connect 5 0 9 1;
+#X connect 5 0 8 1;
 #X connect 6 0 0 1;
 #X connect 7 0 1 1;
-#X connect 9 0 4 0;
-#X connect 9 0 8 0;
+#X connect 8 0 4 0;
 #X restore 150 149 pd modulator1;
 #X obj 133 251 +~;
 #X obj 151 197 +~;
@@ -325,8 +323,8 @@
 #X connect 22 0 10 0;
 #X connect 23 0 22 2;
 #X connect 24 0 20 0;
-#X connect 24 0 25 0;
 #X connect 24 0 22 0;
+#X connect 24 0 25 0;
 #X connect 25 0 5 0;
 #X restore 12 119 pd osc;
 #N canvas 87 50 450 394 osc 0;
@@ -510,19 +508,17 @@
 #X obj 212 200 r \$0-amp1;
 #X obj 160 117 == 0;
 #X obj 243 117 == 1;
-#X obj 292 189 miniscope;
 #X obj 154 222 *~;
-#X connect 0 0 9 0;
-#X connect 1 0 9 0;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
 #X connect 2 0 6 0;
 #X connect 2 0 7 0;
 #X connect 3 0 0 0;
 #X connect 3 0 1 0;
-#X connect 5 0 9 1;
+#X connect 5 0 8 1;
 #X connect 6 0 0 1;
 #X connect 7 0 1 1;
-#X connect 9 0 4 0;
-#X connect 9 0 8 0;
+#X connect 8 0 4 0;
 #X restore 150 149 pd modulator1;
 #X obj 133 251 +~;
 #X obj 151 197 +~;
@@ -656,7 +652,7 @@
 #N canvas 160 218 434 300 mainosc 0;
 #X obj 114 242 outlet~;
 #X obj 114 27 inlet~;
-#N canvas 0 50 450 300 osc 0;
+#N canvas 156 156 450 300 osc 0;
 #X obj 327 37 switch~;
 #X obj 327 11 inlet;
 #X obj 105 45 inlet~;
@@ -675,7 +671,7 @@
 #X connect 7 0 6 1;
 #X connect 8 0 5 0;
 #X restore 31 127 pd osc;
-#N canvas 0 50 450 300 tri 0;
+#N canvas 26 26 450 300 tri 0;
 #X obj 327 37 switch~;
 #X obj 327 11 inlet;
 #X obj 105 45 inlet~;
@@ -689,7 +685,7 @@
 #X connect 5 0 3 0;
 #X connect 6 0 5 1;
 #X restore 114 126 pd tri;
-#N canvas 0 50 450 300 saw 0;
+#N canvas 26 26 450 300 saw 0;
 #X obj 327 37 switch~;
 #X obj 327 11 inlet;
 #X obj 105 45 inlet~;
@@ -699,7 +695,7 @@
 #X connect 2 0 4 0;
 #X connect 4 0 3 0;
 #X restore 193 127 pd saw;
-#N canvas 0 50 450 300 sqr 0;
+#N canvas 182 182 450 300 sqr 0;
 #X obj 327 37 switch~;
 #X obj 327 11 inlet;
 #X obj 105 45 inlet~;
@@ -735,7 +731,7 @@
 #X connect 9 0 4 1;
 #X connect 10 0 5 1;
 #X restore 134 277 pd mainosc;
-#N canvas 0 50 450 300 modulator2 0;
+#N canvas 52 52 450 300 modulator2 0;
 #N canvas 0 50 450 300 osc 0;
 #X obj 327 37 switch~;
 #X obj 327 11 inlet;
@@ -831,19 +827,17 @@
 #X obj 212 200 r \$0-amp1;
 #X obj 160 117 == 0;
 #X obj 243 117 == 1;
-#X obj 292 189 miniscope;
 #X obj 154 222 *~;
-#X connect 0 0 9 0;
-#X connect 1 0 9 0;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
 #X connect 2 0 6 0;
 #X connect 2 0 7 0;
 #X connect 3 0 0 0;
 #X connect 3 0 1 0;
-#X connect 5 0 9 1;
+#X connect 5 0 8 1;
 #X connect 6 0 0 1;
 #X connect 7 0 1 1;
-#X connect 9 0 4 0;
-#X connect 9 0 8 0;
+#X connect 8 0 4 0;
 #X restore 150 149 pd modulator1;
 #X obj 133 251 +~;
 #X obj 151 197 +~;
@@ -1152,19 +1146,17 @@
 #X obj 212 200 r \$0-amp1;
 #X obj 160 117 == 0;
 #X obj 243 117 == 1;
-#X obj 292 189 miniscope;
 #X obj 154 222 *~;
-#X connect 0 0 9 0;
-#X connect 1 0 9 0;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
 #X connect 2 0 6 0;
 #X connect 2 0 7 0;
 #X connect 3 0 0 0;
 #X connect 3 0 1 0;
-#X connect 5 0 9 1;
+#X connect 5 0 8 1;
 #X connect 6 0 0 1;
 #X connect 7 0 1 1;
-#X connect 9 0 4 0;
-#X connect 9 0 8 0;
+#X connect 8 0 4 0;
 #X restore 150 149 pd modulator1;
 #X obj 133 251 +~;
 #X obj 151 197 +~;
@@ -1473,19 +1465,17 @@
 #X obj 212 200 r \$0-amp1;
 #X obj 160 117 == 0;
 #X obj 243 117 == 1;
-#X obj 292 189 miniscope;
 #X obj 154 222 *~;
-#X connect 0 0 9 0;
-#X connect 1 0 9 0;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
 #X connect 2 0 6 0;
 #X connect 2 0 7 0;
 #X connect 3 0 0 0;
 #X connect 3 0 1 0;
-#X connect 5 0 9 1;
+#X connect 5 0 8 1;
 #X connect 6 0 0 1;
 #X connect 7 0 1 1;
-#X connect 9 0 4 0;
-#X connect 9 0 8 0;
+#X connect 8 0 4 0;
 #X restore 150 149 pd modulator1;
 #X obj 133 251 +~;
 #X obj 151 197 +~;
@@ -1794,19 +1784,17 @@
 #X obj 212 200 r \$0-amp1;
 #X obj 160 117 == 0;
 #X obj 243 117 == 1;
-#X obj 292 189 miniscope;
 #X obj 154 222 *~;
-#X connect 0 0 9 0;
-#X connect 1 0 9 0;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
 #X connect 2 0 6 0;
 #X connect 2 0 7 0;
 #X connect 3 0 0 0;
 #X connect 3 0 1 0;
-#X connect 5 0 9 1;
+#X connect 5 0 8 1;
 #X connect 6 0 0 1;
 #X connect 7 0 1 1;
-#X connect 9 0 4 0;
-#X connect 9 0 8 0;
+#X connect 8 0 4 0;
 #X restore 150 149 pd modulator1;
 #X obj 133 251 +~;
 #X obj 151 197 +~;
@@ -2115,19 +2103,17 @@
 #X obj 212 200 r \$0-amp1;
 #X obj 160 117 == 0;
 #X obj 243 117 == 1;
-#X obj 292 189 miniscope;
 #X obj 154 222 *~;
-#X connect 0 0 9 0;
-#X connect 1 0 9 0;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
 #X connect 2 0 6 0;
 #X connect 2 0 7 0;
 #X connect 3 0 0 0;
 #X connect 3 0 1 0;
-#X connect 5 0 9 1;
+#X connect 5 0 8 1;
 #X connect 6 0 0 1;
 #X connect 7 0 1 1;
-#X connect 9 0 4 0;
-#X connect 9 0 8 0;
+#X connect 8 0 4 0;
 #X restore 150 149 pd modulator1;
 #X obj 133 251 +~;
 #X obj 151 197 +~;
@@ -2436,19 +2422,17 @@
 #X obj 212 200 r \$0-amp1;
 #X obj 160 117 == 0;
 #X obj 243 117 == 1;
-#X obj 292 189 miniscope;
 #X obj 154 222 *~;
-#X connect 0 0 9 0;
-#X connect 1 0 9 0;
+#X connect 0 0 8 0;
+#X connect 1 0 8 0;
 #X connect 2 0 6 0;
 #X connect 2 0 7 0;
 #X connect 3 0 0 0;
 #X connect 3 0 1 0;
-#X connect 5 0 9 1;
+#X connect 5 0 8 1;
 #X connect 6 0 0 1;
 #X connect 7 0 1 1;
-#X connect 9 0 4 0;
-#X connect 9 0 8 0;
+#X connect 8 0 4 0;
 #X restore 150 149 pd modulator1;
 #X obj 133 251 +~;
 #X obj 151 197 +~;
@@ -2607,46 +2591,27 @@
 #X msg 394 322 \$1 50;
 #X obj 394 346 line~;
 #X obj 394 297 r \$0-master;
-#X obj 101 101 cnv 15 87 94 empty empty sakkara~ 3 7 0 10 -196688 -261234
-0;
-#X obj 107 116 hsl 50 10 0 1000 0 0 \$0-amp1 \$0-amp1_r AMP1 -2 6 0
-9 -261234 -196688 -162280 0 1;
-#X obj 107 129 hsl 40 10 -10 10 0 0 \$0-freq1 \$0-freq1_r FREQ1 -2
-6 0 9 -261234 -196688 -162280 550 1;
-#X obj 104 142 tgl 10 0 \$0-harm1 \$0-harm1_r empty 17 7 0 10 -261234
--196688 -1 1 1;
-#X obj 139 142 hradio 10 1 0 2 \$0-waveform1 \$0-waveform1_r empty
-0 -8 0 10 -261234 -196688 -1 0;
-#X obj 107 155 hsl 50 10 0 1000 0 0 \$0-amp2 \$0-amp2_r AMP2 -2 6 0
-9 -261234 -196688 -162280 2300 1;
-#X obj 107 168 hsl 40 10 -10 10 0 0 \$0-freq2 \$0-freq2_r FREQ2 -2
-6 0 9 -261234 -196688 -162280 2200 1;
-#X obj 104 181 tgl 10 0 \$0-harm2 \$0-harm2_r empty 17 7 0 10 -261234
--196688 -1 1 1;
-#X obj 139 181 hradio 10 1 0 2 \$0-waveform2 \$0-waveform2_r empty
-0 -8 0 10 -261234 -196688 -1 0;
-#X obj 117 142 hsl 20 10 0.01 0.99 0 0 \$0-modifier1 \$0-modifier1_r
-MOD1 -2 6 0 9 -261234 -196688 -162280 0 1;
-#X obj 117 181 hsl 20 10 0.01 0.99 0 0 \$0-modifier2 \$0-modifier2_r
-MOD2 -2 6 0 9 -261234 -196688 -162280 0 1;
-#X obj 162 118 vsl 10 30 0.01 0.99 0 0 \$0-modifier \$0-modifier_r
-S 2 5 0 10 -261234 -196688 -162280 1400 1;
-#X obj 162 151 vradio 10 1 0 4 \$0-waveform \$0-waveform_r empty 0
--8 0 10 -261234 -196688 -1 1;
-#X obj 175 118 vsl 10 70 0.01 1 1 0 \$0-master \$0-master_r M 2 5 0
-10 -261234 -196688 -162280 6900 1;
-#X obj 149 129 bng 10 250 50 0 \$0-foo \$0-bar empty 17 7 0 10 -261234
--196688 -1;
-#X obj 149 168 bng 10 250 50 0 \$0-foo \$0-bar empty 17 7 0 10 -261234
--196688 -1;
+#X obj 101 101 cnv 15 125 122 empty empty sakkara~ 5 9 0 12 #c0043c #fcc4c4 0;
+#X obj 107 120 hsl 76 12 0 1000 0 0 \$0-amp1 \$0-amp1_r A\ M\ P 2 7 0 9 #c6ffc7 #c0043c #606060 0 1;
+#X obj 107 136 hsl 61 12 -10 10 0 0 \$0-freq1 \$0-freq1_r F\ R\ E\ Q 2 7 0 9 #c6ffc7 #c0043c #606060 0 1;
+#X obj 104 152 tgl 12 0 \$0-harm1 \$0-harm1_r empty 17 7 0 10 #c6ffc7 #c0043c #000000 0 1;
+#X obj 161 152 hradio 12 1 0 2 \$0-waveform1 \$0-waveform1_r empty 0 -8 0 10 #c6ffc7 #c0043c #000000 0;
+#X obj 107 176 hsl 76 12 0 1000 0 0 \$0-amp2 \$0-amp2_r A\ M\ P 2 7 0 9 #e3c6ff #c0043c #606060 0 1;
+#X obj 107 192 hsl 61 12 -10 10 0 0 \$0-freq2 \$0-freq2_r F\ R\ E\ Q 2 7 0 9 #e3c6ff #c0043c #606060 0 1;
+#X obj 104 208 tgl 12 0 \$0-harm2 \$0-harm2_r empty 17 7 0 10 #e3c6ff #c0043c #000000 0 1;
+#X obj 161 208 hradio 12 1 0 2 \$0-waveform2 \$0-waveform2_r empty 0 -8 0 10 #e3c6ff #c0043c #606060 0;
+#X obj 122 152 hsl 34 12 0.01 0.99 0 0 \$0-modifier1 \$0-modifier1_r M\ O\ D 2 7 0 9 #c6ffc7 #c0043c #606060 0 1;
+#X obj 122 208 hsl 34 12 0.01 0.99 0 0 \$0-modifier2 \$0-modifier2_r M\ O\ D 2 7 0 9 #e3c6ff #c0043c #606060 0 1;
+#X obj 196 122 vsl 12 44 0.01 0.99 0 0 \$0-modifier \$0-modifier_r S 3 5 0 10 #fcc4c4 #c0043c #606060 0 1;
+#X obj 196 172 vradio 12 1 0 4 \$0-waveform \$0-waveform_r empty 0 -8 0 10 #fcc4c4 #c0043c #000000 0;
+#X obj 211 122 vsl 12 95 0.01 1 1 0 \$0-master \$0-master_r M 3 5 0 10 #fcc4c4 #c0043c #606060 0 1;
+#X obj 173 136 bng 12 250 50 0 \$0-freq1_reset \$0-bar empty 17 7 0 10 #c6ffc7 #c0043c #000000;
+#X obj 173 192 bng 12 250 50 0 \$0-freq2_reset \$0-bar empty 17 7 0 10 #e3c6ff #c0043c #000000;
 #X obj 236 57 switch~;
-#X obj 175 104 tgl 10 0 \$0-foo \$0-bar empty 17 7 0 10 -261234 -196688
--1 1 1;
-#X msg 204 259 0;
-#X msg 152 267 0;
+#X obj 211 104 tgl 12 0 \$0-switch \$0-bar empty 17 7 0 10 #fcc4c4 #c0043c #000000 0 1;
+#X msg 361 48 0;
 #X obj 22 11 loadbang;
-#X obj 158 104 nbx 1 10 1 9 0 0 \$0-preset \$0-preset_r empty 0 -8
-0 10 -261234 -162280 -1 1 256;
+#X obj 190 104 nbx 1 12 1 9 0 0 \$0-preset \$0-preset_r empty 0 -8 0 10 #fcc4c4 #606060 #606060 0 256;
 #X msg 23 44 1;
 #X obj 24 74 s \$0-preset_r;
 #N canvas 305 50 1027 700 makePreset 0;
@@ -2668,8 +2633,7 @@ S 2 5 0 10 -261234 -196688 -162280 1400 1;
 #X obj 231 394 r \$0-modifier;
 #X obj 249 428 r \$0-waveform;
 #X obj 264 454 r \$0-master;
-#X msg 44 644 set \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10 \$11 \$12
-\$13 \$14;
+#X msg 44 644 set \$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8 \$9 \$10 \$11 \$12 \$13 \$14;
 #X connect 1 0 4 0;
 #X connect 2 0 1 0;
 #X connect 3 0 2 0;
@@ -2720,16 +2684,12 @@ S 2 5 0 10 -261234 -196688 -162280 1400 1;
 #X connect 14 12 12 0;
 #X connect 14 13 13 0;
 #X restore 30 387 pd loadPreset;
-#X msg 30 435 preset.name 0 -7.17949 1 0.01 0 469.388 1.28205 1 0.01
-0 0.483103 1 1;
-#N canvas 569 50 679 710 presetDispenser 0;
+#X msg 30 435 preset.name 306.667 0 0 0 0 0 0 0 0 0 0 0 0.293823;
+#N canvas 569 19 679 710 presetDispenser 0;
 #X obj 230 647 outlet;
 #X msg 186 333;
 #X msg 276 260;
-#X msg 1058 350 ETHER 1 0.508022 500 0 1 1 1 0 1 0 0 1 1 0.741011 0.279741
-0.01 0.01 1 15000 4054.78 4054.78 79.3701 22.1831 18.9155 0.684615
-0.769231 0.615385 1.03704 0.666667 0 0.275723 0.657692 0.1 0.466835
-0.636199 0.695027 1 1 1 1 1 2;
+#X msg 1058 350 ETHER 1 0.508022 500 0 1 1 1 0 1 0 0 1 1 0.741011 0.279741 0.01 0.01 1 15000 4054.78 4054.78 79.3701 22.1831 18.9155 0.684615 0.769231 0.615385 1.03704 0.666667 0 0.275723 0.657692 0.1 0.466835 0.636199 0.695027 1 1 1 1 1 2;
 #X msg 155 354;
 #X msg 216 311;
 #X msg 246 285;
@@ -2762,6 +2722,14 @@ S 2 5 0 10 -261234 -196688 -162280 1400 1;
 #X obj 30 323 r \$0-preset;
 #X obj 114 495 r \$0-foo;
 #X obj 115 536 s \$0-bar;
+#X obj 361 24 r \$0-freq1_reset;
+#X msg 388 135 0;
+#X obj 388 111 r \$0-freq2_reset;
+#X obj 236 26 r \$0-switch;
+#X obj 104 169 cnv 3 86 3 empty empty empty 20 12 0 10 #ffffff #404040 0;
+#X obj 189 120 cnv 3 3 100 empty empty empty 20 12 0 10 #ffffff #404040 0;
+#X obj 361 74 s \$0-freq1_r;
+#X obj 388 161 s \$0-freq2_r;
 #X connect 0 0 6 0;
 #X connect 1 0 4 0;
 #X connect 1 1 4 1;
@@ -2774,14 +2742,14 @@ S 2 5 0 10 -261234 -196688 -162280 1400 1;
 #X connect 7 0 8 0;
 #X connect 8 0 6 1;
 #X connect 9 0 7 0;
-#X connect 24 0 28 0;
-#X connect 25 0 29 0;
-#X connect 27 0 26 0;
-#X connect 28 0 12 0;
-#X connect 29 0 16 0;
-#X connect 30 0 32 0;
-#X connect 32 0 33 0;
-#X connect 34 0 36 0;
-#X connect 37 0 35 0;
-#X connect 38 0 37 0;
-#X coords 0 -1 1 1 89 95 2 100 100;
+#X connect 28 0 46 0;
+#X connect 29 0 31 0;
+#X connect 31 0 32 0;
+#X connect 33 0 35 0;
+#X connect 36 0 34 0;
+#X connect 37 0 36 0;
+#X connect 40 0 28 0;
+#X connect 41 0 47 0;
+#X connect 42 0 41 0;
+#X connect 43 0 26 0;
+#X coords 0 -1 1 1 127 124 2 100 100;
