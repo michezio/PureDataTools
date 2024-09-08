@@ -112,6 +112,16 @@ For the all-pass filter, `fc` and `Q` influence the behaviour in the phase respo
   
 ## Extra
 
+### `[bq_fexpr~]` Generic biquad filter using fexpr~
+
+This is just an implementation of the differential equation of a generic biquadratic filter (the one described in the introduction) using `[fexpr~]` to work on raw samples. This is in theory much heavier than the builtin `[biquad~]` object but allows to use signals to control the parameters.
+
+### `[bq_vcraw~]` Generic biquad filter using raw pole/zero filters
+
+This is an implementation of a biquadratic filter using raw `[cpole~]` and `[czero~]` filter objects. It uses `[quadroots~]` object from `utils` folder to calculate their parameters so it may be a little bit heavy. This however allows for the parameters to be controlled by signals instead of floats. Also this filters outputs both real and imaginary signal from two different outlets.
+
+### Speaker emulations
+
 All the other abstractions are compound filters made of different biquadratic ones that aproximate the frequency response of real speakers and tube amplifiers. I use them at the end of a guitar effect chain to simulate the cabinet.
 
 ## Credits
