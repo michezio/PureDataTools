@@ -2560,6 +2560,9 @@
 #X connect 24 0 22 0;
 #X connect 25 0 5 0;
 #X restore 362 119 pd osc;
+#X obj 341 45 change;
+#X msg 341 67 128 0;
+#X obj 341 24 r \$0-switch;
 #X connect 1 0 2 0;
 #X connect 2 0 8 0;
 #X connect 2 1 9 0;
@@ -2581,6 +2584,16 @@
 #X connect 13 0 3 0;
 #X connect 14 0 3 0;
 #X connect 15 0 3 0;
+#X connect 16 0 17 0;
+#X connect 17 0 8 0;
+#X connect 17 0 9 0;
+#X connect 17 0 10 0;
+#X connect 17 0 11 0;
+#X connect 17 0 12 0;
+#X connect 17 0 13 0;
+#X connect 17 0 14 0;
+#X connect 17 0 15 0;
+#X connect 18 0 16 0;
 #X restore 273 287 pd osc;
 #X obj 280 213 poly 8 1;
 #X obj 287 186 unpack;
@@ -2684,7 +2697,7 @@
 #X connect 14 12 12 0;
 #X connect 14 13 13 0;
 #X restore 30 387 pd loadPreset;
-#X msg 30 435 preset.name 306.667 0 0 0 0 0 0 0 0 0 0 0 0.293823;
+#X msg 30 435 preset.name 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #N canvas 569 19 679 710 presetDispenser 0;
 #X obj 230 647 outlet;
 #X msg 186 333;
